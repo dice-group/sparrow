@@ -1,19 +1,28 @@
 package org.dice_group.sparrow.graph;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import org.dice_group.sparrow.annotation.SparqlAnnotation;
+import org.dice_group.sparrow.owl.OWLNode;
+
 public interface GraphNode {
 	
-	public void createRules();
+	public void addAnnotation(SparqlAnnotation annotation);
 	
-	public void execute();	
+	public HashSet<SparqlAnnotation> getAnnotations();
 	
-	public Map<String, OWLNode> useRule();
+
+	public String useRule();
 	
-	public List<GraphNode> getChildren();
-	
-	public List<GraphNode> getParents();
 	
 	public String getName();
+
+	public List<Triple> getRelations();
+
+	public void setRelations(List<Triple> relations);
+	public void addRelation(Triple relation);
+
+	
 }

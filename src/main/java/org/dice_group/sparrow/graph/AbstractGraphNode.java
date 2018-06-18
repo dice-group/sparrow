@@ -10,31 +10,65 @@ import org.dice_group.sparrow.annotation.SparqlAnnotation;
 
 public abstract class AbstractGraphNode implements GraphNode {
 
-	private Set<SparqlAnnotation> annotations = new HashSet<SparqlAnnotation>();
-	private List<GraphNode> children = new LinkedList<GraphNode>();
-	private List<GraphNode> parents = new LinkedList<GraphNode>();
+	private HashSet<SparqlAnnotation> annotations = new HashSet<SparqlAnnotation>();
+	
+	private List<Triple> relations = new LinkedList<Triple>();
+
 	
 	@Override
-	public List<GraphNode> getParents(){
-		return this.parents;
+	public void addAnnotation(SparqlAnnotation annotation) {
+		this.annotations.add(annotation);
+	}
+	
+	public HashSet<SparqlAnnotation> getAnnotations(){
+		return this.annotations;
 	}
 	
 	@Override
-	public List<GraphNode> getChildren(){
-		return this.children;
+	public boolean equals(Object obj) {
+		if(obj instanceof GraphNode) {
+			if(((GraphNode) obj).getName().equals(this.getName())){
+				return specializedEquals(obj);
+			}
+		}
+		return false;
+	}
+
+	public abstract boolean specializedEquals(Object obj);
+
+	/**
+	 * @return the relations
+	 */
+	@Override
+	public List<Triple> getRelations() {
+		return relations;
 	}
 
 	/**
-	 * @return the annotations
+	 * @param relations the relations to set
 	 */
-	public Set<SparqlAnnotation> getAnnotations() {
-		return annotations;
+	@Override
+	public void setRelations(List<Triple> relations) {
+		this.relations = relations;
 	}
-
-	/**
-	 * @param annotations the annotations to set
-	 */
-	public void setAnnotations(Set<SparqlAnnotation> annotations) {
-		this.annotations = annotations;
+	
+	@Override
+	public void addRelation(Triple relation) {
+		this.relations.add(relation);
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getName().hashCode();
+	}
+	
+	@Override
+	public String toString() {
+		return this.getName()+"["+this.getRelations()+"]{"+this.getAnnotations()+"}";
+	}
+	
+	@Override
+	public String useRule() {
+		return getName();
 	}
 }

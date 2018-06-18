@@ -3,33 +3,29 @@ package org.dice_group.sparrow.graph.impl;
 import java.util.Map;
 
 import org.dice_group.sparrow.graph.AbstractGraphNode;
-import org.dice_group.sparrow.graph.OWLNode;
+import org.dice_group.sparrow.owl.OWLNode;
 
 public class BNodeGraphNode extends AbstractGraphNode {
 
 	private String bnode;
 	
-	@Override
-	public void createRules() {
-		// TODO Auto-generated method stub
-
+	public BNodeGraphNode(String blankNodeLabel) {
+		super();
+		this.bnode=blankNodeLabel;
 	}
 
-	@Override
-	public void execute() {
-		// TODO Auto-generated method stub
 
-	}
 
-	@Override
-	public Map<String, OWLNode> useRule() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public String getName() {
 		return bnode;
+	}
+
+	@Override
+	public boolean specializedEquals(Object obj) {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }
