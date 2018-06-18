@@ -39,7 +39,7 @@ public class Rule {
 			if(ruleObj instanceof GraphNode) {
 				exchange = ((GraphNode)ruleObj).getName();
 			}
-			String replacer = ((GraphNode)relation.get(i)).getName();
+			String replacer = ((GraphNode)relation.get(i)).useRule();
 			if(dismissURIQuotes) {
 				if(relation.get(i) instanceof URIGraphNode) {
 					replacer = replacer.replace("<", "").replace(">","");
