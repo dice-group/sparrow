@@ -1,4 +1,4 @@
-[![sparrow_logo.png](https://s14.postimg.org/q54vcuutd/sparrow_logo.png)](https://postimg.org/image/fib27fmnx/)
+[![logo2.png](https://s15.postimg.cc/a2g71n35n/logo2.png)](https://postimg.cc/image/s599suz07/)
 
 SPARROW is a project to convert SPARQL Queries to OWL Queries where it is possible.
 
