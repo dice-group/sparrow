@@ -22,7 +22,7 @@ public class URIGraphNode extends AbstractGraphNode {
 
 	@Override
 	public boolean specializedEquals(Object obj) {
-		return true;
+		return obj instanceof URIGraphNode;
 	}
 
 }

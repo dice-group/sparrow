@@ -34,4 +34,11 @@ public class AbstractSparqlAnnotation implements SparqlAnnotation {
 	public String toString() {
 		return ID+":"+this.getClass().getName();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof SparqlAnnotation)
+			return obj.toString().equals(toString());
+		return false;
+	}
 }

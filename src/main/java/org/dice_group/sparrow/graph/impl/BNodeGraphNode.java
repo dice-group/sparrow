@@ -25,7 +25,7 @@ public class BNodeGraphNode extends AbstractGraphNode {
 	@Override
 	public boolean specializedEquals(Object obj) {
 		// TODO Auto-generated method stub
-		return true;
+		return obj instanceof BNodeGraphNode;
 	}
 
 }
