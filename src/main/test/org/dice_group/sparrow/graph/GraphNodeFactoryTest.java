@@ -23,7 +23,6 @@ public class GraphNodeFactoryTest {
 		assertEquals(new LiteralGraphNode("\"test\"@en"), GraphNodeFactory.create(NodeFactory.createLiteral("test", "en")));
 		assertEquals(new LiteralGraphNode("\"test\"^^http://test.com"), GraphNodeFactory.create(NodeFactory.createLiteral("test", new BaseDatatype("http://test.com"))));
 		assertEquals(new BNodeGraphNode("_:abc"), GraphNodeFactory.create(NodeFactory.createBlankNode(BlankNodeId.create("_:abc"))));
-		
 
 	}
 }

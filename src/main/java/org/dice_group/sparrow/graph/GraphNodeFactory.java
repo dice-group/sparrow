@@ -18,10 +18,9 @@ public class GraphNodeFactory {
 		if(node.isLiteral()) {
 			return createLiteralNode(node);
 		}
-		if(node.isVariable()) {
+		else {
 			return createVarNode(node);
 		}
-		return null;
 	}
 
 	private static GraphNode createVarNode(Node node) {

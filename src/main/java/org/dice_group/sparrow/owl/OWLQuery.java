@@ -16,8 +16,13 @@ public class OWLQuery {
 	}
 	
 	public List<OWLNode> getOWLNodeByName(String name) {
-		//TODO
-		return null;
+		List<OWLNode> nodesWithName = new LinkedList<OWLNode>();
+		for(OWLNode node : this.sequence) {
+			if(name.equals(node.name)) {
+				nodesWithName.add(node);
+			}
+		}
+		return nodesWithName;
 	}
 	
 	public OWLNode getOWLNodeByIndex(int index) {

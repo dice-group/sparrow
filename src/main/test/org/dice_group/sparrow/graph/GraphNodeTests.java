@@ -96,4 +96,5 @@ public class GraphNodeTests {
 		assertTrue(annos.contains(new GroupAnnotation(1)));
 		System.out.println("Ending Test Node "+node);
 	}
+	
 }

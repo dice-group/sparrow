@@ -42,7 +42,7 @@ public class RuleIndicator {
 
 			int i = 0;
 			for (Triple relation : rootNode.getRelations()) {
-				// combine relations
+				// combine relations TODO direct injectRule
 				if (i++ > 0)
 					query.addOWLNode(OWLNode.AND_NODE);
 				query.addOWLNode(OWLNode.GROUP_START_NODE);
@@ -59,8 +59,7 @@ public class RuleIndicator {
 	private OWLNode injectRule(List<GraphNode> path, Triple relation) throws RuleNotAvailableException {
 		// for each node inject their relations
 		OWLNode initial = rules.execute(relation);
-		OWLSeqNode seqNode = new OWLSeqNode();
-		seqNode.append(initial);
+		OWLSeqNode seqNode = new OWLSeqNode(initial);
 		if (alreadyUsed.contains(relation)) {
 			return new OWLNode("");
 		}
@@ -68,7 +67,7 @@ public class RuleIndicator {
 			if (!path.contains(relation.get(i))) {
 				path.add((GraphNode) relation.get(i));
 				for (Triple subRelation : ((GraphNode)relation.get(i)).getRelations()) {
-						seqNode.append(injectRule(path, subRelation));
+						seqNode.putChild(injectRule(path, subRelation));
 				}
 			}
 		}

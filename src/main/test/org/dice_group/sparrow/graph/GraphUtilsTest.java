@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.HashSet;
 
 import org.dice_group.sparrow.graph.impl.URIGraphNode;
+import org.dice_group.sparrow.graph.impl.VarGraphNode;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,5 +51,25 @@ public class GraphUtilsTest {
 		assertEquals(null, GraphUtils.getNodeWithName("notInList", graph));
 		assertEquals(null, GraphUtils.getNodeWithName("notInList", triples));
 	}
+	
+	@Test
+	public void simpleTripleTest() {
+		Triple t = new Triple(null, null, null);
+		t.setSubject(new VarGraphNode("a"));
+		t.setPredicate(new VarGraphNode("b"));
+		t.setObject(new VarGraphNode("c"));
+		
+		assertEquals(new VarGraphNode("a"), t.getSubject());
+		assertEquals(new VarGraphNode("b"), t.getPredicate());
+		assertEquals(new VarGraphNode("c"), t.getObject());
+		
+		assertEquals(new VarGraphNode("a"), t.get(0));
+		assertEquals(new VarGraphNode("b"), t.get(1));
+		assertEquals(new VarGraphNode("c"), t.get(2));
+		assertEquals(null, t.get(3));
+		
+		
+	}
+
 	
 }
