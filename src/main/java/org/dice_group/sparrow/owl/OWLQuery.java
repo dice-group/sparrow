@@ -16,6 +16,7 @@ public class OWLQuery {
 	}
 	
 	public List<OWLNode> getOWLNodeByName(String name) {
+		//TODO
 		return null;
 	}
 	
