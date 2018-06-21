@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
+import org.dice_group.sparrow.exceptions.GraphContainsCycleException;
 import org.dice_group.sparrow.exceptions.RootNodeNotVarException;
 import org.dice_group.sparrow.exceptions.RuleHasNotNObjectsException;
 import org.dice_group.sparrow.exceptions.RuleNotAvailableException;
@@ -16,7 +17,7 @@ import org.dice_group.sparrow.sparql.Sparql2Owl;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, RootNodeNotVarException, RuleHasNotNObjectsException, RuleNotAvailableException {
+	public static void main(String[] args) throws FileNotFoundException, IOException, RootNodeNotVarException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
 		if(args.length<3) {
 			System.out.println("USAGE: sparrow [-nD] ruleFile queryInputFile queryOutputFile");
 			System.out.println("\t -nD := Dismiss URI Quotes in OWL. <http:test.com> -> http://test.com");

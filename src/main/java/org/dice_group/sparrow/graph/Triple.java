@@ -89,4 +89,17 @@ public class Triple {
 		return null;
 	}
 
+	public int getIndex(GraphNode lastNode) {
+		if(lastNode.equals(subject)) {
+			return 0;
+		}
+		if(lastNode.equals(predicate)) {
+			return 1;
+		}
+		if(lastNode.equals(object)) {
+			return 2;
+		}
+		return -1;
+	}
+
 }

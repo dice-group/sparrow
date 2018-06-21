@@ -1,0 +1,4 @@
+0 -> %% rule1 URI_1 -> %% AND ( rule1 URI_1 )
+0 -> %% URI_1 URI_2 -> %% AND ( URI_1 URI_2 )
+0 -> %% URI LITERAL -> %% AND ( URI LITERAL )
+1 -> URI_0 %% URI_1 -> %% VALUE URI_1 AND %%^(-1) VALUE URI_0

@@ -11,9 +11,8 @@ public class VarGraphNode extends AbstractGraphNode {
 	
 	public VarGraphNode(String varName) {
 		super();
-		this.varName=varName;
+		this.varName="?"+varName;
 	}
-
 
 
 	@Override

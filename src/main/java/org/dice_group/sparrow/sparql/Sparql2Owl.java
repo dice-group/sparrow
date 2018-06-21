@@ -7,6 +7,7 @@ import java.util.Set;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.sparql.syntax.ElementWalker;
+import org.dice_group.sparrow.exceptions.GraphContainsCycleException;
 import org.dice_group.sparrow.exceptions.RootNodeNotVarException;
 import org.dice_group.sparrow.exceptions.RuleHasNotNObjectsException;
 import org.dice_group.sparrow.exceptions.RuleNotAvailableException;
@@ -25,11 +26,11 @@ public class Sparql2Owl {
 	}
 	
 	
-	public String convertSparqlQuery(String query, String varName) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException {
+	public String convertSparqlQuery(String query, String varName) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
 		return convertSparqlQuery(QueryFactory.create(query), varName);
 	}
 
-	public String convertSparqlQuery(Query query, String varName) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException {
+	public String convertSparqlQuery(Query query, String varName) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
 		// 1. walk query and create graph
 		SparqlElementVisitor elVisitor = new SparqlElementVisitor();
 		elVisitor.setElementWhere(query.getQueryPattern());
@@ -55,7 +56,7 @@ public class Sparql2Owl {
 	}
 
 
-	public String convertSparqlQuery(String query) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException {
+	public String convertSparqlQuery(String query) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
 		Query q = QueryFactory.create(query);
 		return this.convertSparqlQuery(q, q.getProjectVars().get(0).getName());
 	}
