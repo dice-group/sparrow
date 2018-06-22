@@ -4,7 +4,9 @@ import org.dice_group.sparrow.graph.GraphNode;
 import org.dice_group.sparrow.graph.Triple;
 import org.dice_group.sparrow.graph.impl.URIGraphNode;
 import org.dice_group.sparrow.graph.impl.VarGraphNode;
+import org.dice_group.sparrow.owl.BaseOWLNode;
 import org.dice_group.sparrow.owl.OWLNode;
+import org.dice_group.sparrow.owl.OWLParser;
 
 public class Rule {
 
@@ -45,12 +47,12 @@ public class Rule {
 			String exchange = ruleObj.toString();
 	
 			String replacer = ((GraphNode)relation.get(i)).useRule();
-			if(relation.get(i) instanceof VarGraphNode && i==2) {
-				replacer = "SOME";
-			}
-			else if(relation.get(i) instanceof VarGraphNode && i==0) {
-				replacer = "Thing";
-			}
+//			if(relation.get(i) instanceof VarGraphNode && i==2) {
+//				replacer = "SOME";
+//			}
+//			else if(relation.get(i) instanceof VarGraphNode && i==0) {
+//				replacer = "Thing";
+//			}
 			if(ruleObj instanceof VarGraphNode) {
 				exchange = ((GraphNode)ruleObj).getName().substring(1);
 			}
@@ -65,7 +67,7 @@ public class Rule {
 			owlString = owlString.replace(exchange, replacer);
 			
 		}
-		return new OWLNode(owlString);
+		return OWLParser.parse(owlString);
 	}
 
 }

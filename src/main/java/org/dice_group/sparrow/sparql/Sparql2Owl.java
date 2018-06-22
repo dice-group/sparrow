@@ -42,7 +42,7 @@ public class Sparql2Owl {
 		Iterator<GraphNode> nodeIt = nodeList.iterator();
 		while(nodeIt.hasNext()) {
 			GraphNode node = nodeIt.next();
-			if(node instanceof VarGraphNode && node.getName().equals(varName)) {
+			if(node instanceof VarGraphNode && node.getName().equals("?"+varName)) {
 				rootNode = node;
 				break;
 			}

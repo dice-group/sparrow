@@ -40,7 +40,7 @@ public class RulesTest {
 				"class dbr:Human", true});
 		data.add(new Object[] {new String[] {"0 -> URI_0 %%_0 %%_1 -> %%_1 URI_0", "0 -> %% rdf:type URI_1 -> class URI_1"}, 
 				new Triple(new URIGraphNode("dbr:Human"), new VarGraphNode("s"), new VarGraphNode("p")),
-				"SOME dbr:Human", true});
+				"?p dbr:Human", true});
 		data.add(new Object[] {new String[] {"0 -> BNODE URI_1 LITERAL_1 -> BNODE (URI_1 LITERAL_1)"}, 
 				new Triple(new BNodeGraphNode("_:abc"), new URIGraphNode("dbr:Human"), new LiteralGraphNode("\"Hello World\"")),
 				"_:abc (dbr:Human \"Hello World\")", true});

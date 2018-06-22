@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.jena.graph.Node;
 import org.apache.jena.sparql.core.TriplePath;
 import org.apache.jena.sparql.syntax.Element;
 import org.apache.jena.sparql.syntax.ElementFilter;
@@ -19,6 +20,7 @@ import org.dice_group.sparrow.annotation.SparqlAnnotation;
 import org.dice_group.sparrow.annotation.impl.GroupAnnotation;
 import org.dice_group.sparrow.graph.GraphNode;
 import org.dice_group.sparrow.graph.GraphNodeFactory;
+import org.dice_group.sparrow.graph.GraphUtils;
 import org.dice_group.sparrow.graph.Triple;
 
 public class SparqlElementVisitor extends RecursiveElementVisitor {
@@ -33,8 +35,9 @@ public class SparqlElementVisitor extends RecursiveElementVisitor {
 
 	private boolean started = false;
 	private Element where;
-	private GroupAnnotation currentGroup;
 	private int groupIndex=0;
+	private GroupAnnotation currentGroup = new GroupAnnotation(groupIndex++);
+
 
 	private HashSet<GraphNode> nodes = new HashSet<GraphNode>();
 
@@ -90,9 +93,9 @@ public class SparqlElementVisitor extends RecursiveElementVisitor {
 			for (TriplePath path : el.getPattern().getList()) {
 				if (path.getPredicate() != null) {
 					// plain predicate
-					GraphNode s = GraphNodeFactory.create(path.getSubject());
-					GraphNode p = GraphNodeFactory.create(path.getPredicate());
-					GraphNode o = GraphNodeFactory.create(path.getObject());
+					GraphNode s = addNode(path.getSubject());
+					GraphNode p = addNode(path.getPredicate());
+					GraphNode o = addNode(path.getObject());
 					s.addAnnotation(currentGroup);
 					p.addAnnotation(currentGroup);
 					o.addAnnotation(currentGroup);
@@ -100,9 +103,7 @@ public class SparqlElementVisitor extends RecursiveElementVisitor {
 					s.addRelation(relation);
 					p.addRelation(relation);
 					o.addRelation(relation);
-					nodes.add(s);
-					nodes.add(p);
-					nodes.add(o);
+					
 				}
 			}
 
@@ -110,16 +111,15 @@ public class SparqlElementVisitor extends RecursiveElementVisitor {
 		
 	}
 	
-	private void addNode(GraphNode node) {
-		if(this.nodes.contains(node)) {
-			Iterator<GraphNode> itNode = nodes.iterator();
-			while(itNode.hasNext()) {
-				GraphNode tmp = itNode.next();
-				//TODO relations and Annotatioins also added together not replaced
-				tmp.getRelations().addAll(node.getRelations());
-				tmp.getAnnotations().addAll(node.getAnnotations());
-			}
+	private GraphNode addNode(Node rdf) {
+		GraphNode node = GraphNodeFactory.create(rdf);
+		GraphNode tmp = GraphUtils.getNodeWithName(node.getName(), nodes);
+		if(tmp!=null) {
+			node=tmp;
+		}else {
+			nodes.add(node);
 		}
+		return node;
 	}
 
 }

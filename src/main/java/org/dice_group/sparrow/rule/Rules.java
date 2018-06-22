@@ -92,6 +92,6 @@ public class Rules {
 				return r.execute(relation);
 			}
 		}
-		throw new RuleNotAvailableException(relation.toString());
+		throw new RuleNotAvailableException(relation.toString()+" with direction "+direction);
 	}
 }

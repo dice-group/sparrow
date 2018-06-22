@@ -24,7 +24,7 @@ public class GraphNodeFactory {
 	}
 
 	private static GraphNode createVarNode(Node node) {
-		VarGraphNode ret = new VarGraphNode(node.getName());
+		VarGraphNode ret = new VarGraphNode(node.getName()); 
 		
 		return ret;
 	}

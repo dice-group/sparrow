@@ -1,4 +1,22 @@
-0 -> %% rule1 URI_1 -> %% AND ( rule1 URI_1 )
-0 -> %% URI_1 URI_2 -> %% AND ( URI_1 URI_2 )
-0 -> %% URI LITERAL -> %% AND ( URI LITERAL )
-1 -> URI_0 %% URI_1 -> %% VALUE URI_1 AND %%^(-1) VALUE URI_0
+
+0 -> %%_0 URI_0 URI_1 ->  %%_0 AND URI_0 VALUE URI_1 
+1 -> %%_0 URI_0 URI_1 ->  ( URI_0 VALUE URI_1) AND ( URI_0^{-1} VALUE %%_0 )
+2 -> %%_0 URI_0 URI_1 -> 
+0 -> %%_0 URI_0 LITERAL -> %%_0 AND ( URI_0 VALUE LITERAL )
+1 -> %%_0 URI_0 LITERAL -> 
+2 -> %%_0 URI_0 LITERAL -> 
+0 -> URI_0 %%_0 URI_1 -> URI_0 AND ( %%_0 VALUE URI_1 )
+1 -> URI_0 %%_0 URI_1 -> %%_0 VALUE URI_1 AND %%_0^{-1} VALUE URI_0
+2 -> URI_0 %%_0 URI_1 -> 
+0 -> URI_0 URI_1 URI_2 -> URI_0 AND ( URI_1 VALUE URI_2 )
+1 -> URI_0 URI_1 URI_2 -> ( URI_1 VALUE URI_2) AND (URI_1^{-1} VALUE URI_0 )
+2 -> URI_0 URI_1 URI_2 -> 
+0 -> URI_0 URI_1 %%_0 -> URI_0 AND ( URI_1 VALUE %%_0 )
+1 -> URI_0 URI_1 %%_0 -> 
+2 -> URI_0 URI_1 %%_0 -> %%_0 AND (URI_1^{-1} VALUE URI_0)
+0 -> %%_0 URI_0 %%_1 ->  %%_0 AND ( URI_0 VALUE %%_1 )
+1 -> %%_0 URI_0 %%_1 -> 
+2 -> %%_0 URI_0 %%_1 -> 
+0 -> URI_0 URI_1 LITERAL -> URI_0 AND ( URI_1 VALUE LITERAL )
+1 -> URI_0 URI_1 LITERAL -> 
+2 -> URI_0 URI_1 LITERAL -> 

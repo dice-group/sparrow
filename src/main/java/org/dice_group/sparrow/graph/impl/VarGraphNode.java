@@ -10,7 +10,7 @@ public class VarGraphNode extends AbstractGraphNode {
 	private String varName;
 	
 	public VarGraphNode(String varName) {
-		super();
+		super(); 
 		this.varName="?"+varName;
 	}
 

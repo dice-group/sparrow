@@ -46,7 +46,7 @@ public class RuleTest {
 				new Triple(new VarGraphNode("?s"), new URIGraphNode("rdf:class"), new URIGraphNode("<dbr:Human>")),
 				true });
 		data.add(new Object[] { new Object[] { new URIGraphNode("URI_1"), "rdf:class", new VarGraphNode("%%_1") },
-				"class %%_1", false, "class SOME",
+				"class %%_1", false, "class ?s",
 				new Triple(new URIGraphNode("dbr:human"), new URIGraphNode("rdf:class"), new VarGraphNode("s")),
 				true });
 		return data;
