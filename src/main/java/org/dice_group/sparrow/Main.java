@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryFactory;
 import org.dice_group.sparrow.exceptions.GraphContainsCycleException;
 import org.dice_group.sparrow.exceptions.RootNodeNotVarException;
 import org.dice_group.sparrow.exceptions.RuleHasNotNObjectsException;
@@ -58,7 +60,9 @@ public class Main {
 	}
 	
 	public static void print(String sparql, String owl, PrintWriter pw) {
-		pw.print("\"" + sparql + "\",");
+		Query q = QueryFactory.create(sparql);
+		q.getPrefixMapping().clearNsPrefixMap();
+		pw.print("\"" + q.serialize().replace("\n", " ").replaceAll("\\s+", " ") + "\",");
 		pw.println("\"" + owl + "\"");
 	}
 
