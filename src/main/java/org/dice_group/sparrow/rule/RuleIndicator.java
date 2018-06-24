@@ -74,7 +74,7 @@ public class RuleIndicator {
 			while(m.find()) {
 				String prop = m.group(1);
 				completeQuery.append(inverseRule.replace("PROP", prop).replace("INVERSE", prop+"Inverse")).append("\n");
-				queryStr = queryStr.replace(prop+"{-1}", prop+"Inverse");
+				queryStr = queryStr.replace(prop+"^{-1}", prop+"Inverse");
 			}
 			//TODO for each property variable (save while going through) replace with baseRule and define it
 			for(String var : propertyVars) {
