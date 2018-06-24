@@ -26,9 +26,9 @@ public class Sparql2OwlTest {
 	public static Collection<Object[]> data() {
 		List<Object[]> data = new LinkedList<Object[]>();
 		data.add(new Object[] { "SELECT ?s {?s <http://test.com#p1> <http://test.com/res/Berlin>}", 
-				"(Thing AND (http://test.com#p1 VALUE http://test.com/res/Berlin))" });
+				"(Thing THAT ( http://test.com#p1 SOME http://test.com/res/Berlin ))" });
 		data.add(new Object[] { "SELECT ?s ?o ?t WHERE { ?s <http://test.com#p1> ?o . ?s <http://test.com#p2> <http://test.com/res/obj1> . ?o <http://test.com#p1> <http://test.com/res/obj3> . ?o <http://test.com#p3> ?t . ?t <http://test.com#p2> <http://test.com/res/obj1> }", 
-				"(Thing AND (http://test.com#p1 SOME ((Thing AND (http://test.com#p1 VALUE http://test.com/res/obj3)) AND (Thing AND (http://test.com#p3 SOME ((Thing AND (http://test.com#p2 VALUE http://test.com/res/obj1)))))))) AND (Thing AND (http://test.com#p2 VALUE http://test.com/res/obj1))" });
+				"(Thing THAT (http://test.com#p1 SOME ((Thing THAT ( http://test.com#p1 SOME http://test.com/res/obj3 )) AND (Thing THAT (http://test.com#p3 SOME ((Thing THAT ( http://test.com#p2 SOME http://test.com/res/obj1 )))))))) AND (Thing THAT ( http://test.com#p2 SOME http://test.com/res/obj1 ))" });
 		return data;
 	}
 

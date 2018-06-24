@@ -31,6 +31,10 @@ public class Sparql2Owl {
 	}
 
 	public String convertSparqlQuery(Query query, String varName) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
+		//0.
+//		System.out.println(query);
+		query.getPrefixMapping().clearNsPrefixMap();
+//		System.out.println(query);
 		// 1. walk query and create graph
 		SparqlElementVisitor elVisitor = new SparqlElementVisitor();
 		elVisitor.setElementWhere(query.getQueryPattern());
@@ -56,9 +60,16 @@ public class Sparql2Owl {
 	}
 
 
-	public String convertSparqlQuery(String query) throws RootNodeNotVarException, IOException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
-		Query q = QueryFactory.create(query);
-		return this.convertSparqlQuery(q, q.getProjectVars().get(0).getName());
+	public String convertSparqlQuery(String query) {
+		try {
+			Query q = QueryFactory.create(query);
+			return this.convertSparqlQuery(q, q.getProjectVars().get(0).getName());
+		}catch(Exception e) {
+			System.out.println("Query could not be converted ");
+			System.out.println("ERROR Query: "+query);
+			System.out.println(e.getMessage());
+		}
+		return "";
 	}
 
 }

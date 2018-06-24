@@ -45,7 +45,7 @@ public class RuleIndicatorTest {
 		n1.addRelation(rel1);
 		v1.addRelation(rel1);
 		rule1.addRelation(rel1);
-		assertEquals("(Thing AND (rule1 VALUE n1))", indicator.injectRules(v1).toString());
+		assertEquals("(Thing THAT ( rule1 SOME n1 ))", indicator.injectRules(v1).toString());
 
 		//?v1 WHERE {?v1 rule1 n1 . ?v1 rule2 l1}
 		//expect Thing AND ( rule1 n1 )	AND ( rule2 l1 )
@@ -54,7 +54,7 @@ public class RuleIndicatorTest {
 		v1.addRelation(rel2);
 		rule2.addRelation(rel2);
 		this.indicator=new RuleIndicator("src/test/resources/rules.brg", true);
-		assertEquals("(Thing AND (rule1 VALUE n1)) AND (Thing AND ( rule2 VALUE l1 ))",indicator.injectRules(v1).toString());
+		assertEquals("(Thing THAT ( rule1 SOME n1 )) AND (Thing THAT ( rule2 SOME l1 ))",indicator.injectRules(v1).toString());
 		
 		
 		rel1 = new Triple(n2, v2, n3);
@@ -62,7 +62,7 @@ public class RuleIndicatorTest {
 		v2.addRelation(rel1);
 		n3.addRelation(rel1);
 		this.indicator=new RuleIndicator("src/test/resources/rules.brg", true);
-		assertEquals("((Thing VALUE n3) AND (Thing^{-1} VALUE n2))",indicator.injectRules(v2).toString());
+		assertEquals("((Thing SOME n3) AND (Thing^{-1} SOME n2))",indicator.injectRules(v2).toString());
 		
 	}
 	
@@ -117,7 +117,7 @@ public class RuleIndicatorTest {
 		
 		String query =  indicator.injectRules(v2);
 		System.out.println(query.toString());
-		assertEquals("(Thing AND (rule1 SOME ((n3 AND ( rule2 VALUE l1 ))))) AND (Thing AND (rule1 SOME ((Thing AND (rule1 VALUE n3))))) AND (Thing AND (rule1^{-1} SOME ((n1 AND (rule1 SOME ((n2 AND ( rule2 VALUE n3 ))))))))",query.toString());
+		assertEquals("(Thing THAT (rule1 SOME ((n3 THAT ( rule2 SOME l1 ))))) AND (Thing THAT (rule1 SOME ((Thing THAT ( rule1 SOME n3 ))))) AND (Thing THAT (rule1^{-1} SOME ((n1 THAT (rule1 SOME ((n2 THAT ( rule2 SOME n3 ))))))))",query.toString());
 
 	}	
 }

@@ -17,28 +17,49 @@ import org.dice_group.sparrow.sparql.Sparql2Owl;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, RootNodeNotVarException, RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
-		if(args.length<3) {
+	public static void main(String[] args) throws FileNotFoundException, IOException, RootNodeNotVarException,
+			RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException {
+		if (args.length < 3) {
 			System.out.println("USAGE: sparrow [-nD] ruleFile queryInputFile queryOutputFile");
 			System.out.println("\t -nD := Dismiss URI Quotes in OWL. <http:test.com> -> http://test.com");
 			return;
 		}
-		String ruleFile = args[args.length-3];
-		String inputFile = args[args.length-2];
-		String outputFile = args[args.length-1];
-		boolean dismissURIQuotes=true;
-		List<String> options = Arrays.asList(ArrayUtils.subarray(args, 0, args.length-3));
-		if(options.contains("-nD")) {
-			dismissURIQuotes=false;
+		String ruleFile = args[args.length - 3];
+		String inputFile = args[args.length - 2];
+		String outputFile = args[args.length - 1];
+		int succeded=0, failed=0;
+		boolean dismissURIQuotes = true;
+		List<String> options = Arrays.asList(ArrayUtils.subarray(args, 0, args.length - 3));
+		if (options.contains("-nD")) {
+			dismissURIQuotes = false;
 		}
-		try(BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-				PrintWriter pw = new PrintWriter(outputFile)){
+		try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+				PrintWriter pw = new PrintWriter(outputFile)) {
 			String query;
 			Sparql2Owl bridge = new Sparql2Owl(ruleFile, dismissURIQuotes);
-			while((query=reader.readLine())!=null) {
-				pw.println(bridge.convertSparqlQuery(query));
+			while ((query = reader.readLine()) != null) {
+				String owl = bridge.convertSparqlQuery(query);
+				if (!owl.isEmpty()) {
+					print(query, owl, pw);
+					succeded++;
+				}
+				else {
+					failed++;
+				}
 			}
 		}
+		System.out.println();
+		System.out.println("STATS: ");
+		System.out.println((failed+succeded)+" Queries are in the input query set.");
+		System.out.println(succeded+" Queries could be succesfully converted.");
+		System.out.println(failed+" Queries could not be converted.");
+
 	}
 	
+	public static void print(String sparql, String owl, PrintWriter pw) {
+		pw.print("\"" + sparql + "\";");
+		if(owl.contains(""))
+		pw.println("\"" + owl + "\"");
+	}
+
 }

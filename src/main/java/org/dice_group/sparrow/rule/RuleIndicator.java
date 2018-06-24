@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.jena.ext.com.google.common.collect.Lists;
@@ -28,7 +29,8 @@ public class RuleIndicator {
 
 	private Set<Triple> alreadyUsed = new HashSet<Triple>();
 	private Map<GraphNode, OWLNode> executedMapping = new HashMap<GraphNode, OWLNode>();
-
+	private Set<String> propertyVars = new HashSet<String>();
+	
 	private GraphNode rootNode;
 	private Rules rules = new Rules();
 
@@ -63,9 +65,30 @@ public class RuleIndicator {
 				}
 			}
 			System.out.println(query.toString());
+			StringBuilder completeQuery = new StringBuilder();
 			String queryStr = query.build();
+			//TODO for each property(-1) -> create inverse rules and replace with propertyInverse
+			String inverseRule = "ObjectProperty: INVERSE \n   inverseOf PROP";
+			Pattern p = Pattern.compile("[\\s\\)\\(]([^\\s\\(\\)]+)\\^\\{-1\\}");
+			Matcher m = p.matcher(queryStr);
+			while(m.find()) {
+				String prop = m.group(1);
+				completeQuery.append(inverseRule.replace("PROP", prop).replace("INVERSE", prop+"Inverse")).append("\n");
+				queryStr = queryStr.replace(prop+"{-1}", prop+"Inverse");
+			}
+			//TODO for each property variable (save while going through) replace with baseRule and define it
+			for(String var : propertyVars) {
+				//String baseRule = "ObjectProperty: baseRule ";
+				//completeQuery.append(baseRule);
+				queryStr = queryStr.replace(var, "baseRule");
+			}
+			if(!propertyVars.isEmpty()) {
+				
+			}
+			//for each other var replace with string
 			queryStr = Pattern.compile("\\?[a-zA-Z0-9]+").matcher(queryStr).replaceAll("Thing");
-			return queryStr;
+			completeQuery.append(queryStr);
+			return completeQuery.toString();
 		} else {
 			throw new RootNodeNotVarException(rootNode.toString());
 		}
@@ -73,7 +96,6 @@ public class RuleIndicator {
 
 	private OWLNode injectRule(List<GraphNode> path, Triple relation) throws RuleNotAvailableException {
 		// for each node inject their relations
-		// check if inverse ->
 		GraphNode lastNode = path.get(path.size() - 1); 
 		int direction = relation.getIndex(lastNode);
 		if (lastNode != rootNode && lastNode.equals(relation.object)
@@ -90,10 +112,14 @@ public class RuleIndicator {
 			return null;
 		}
 		alreadyUsed.add(relation);
+		if(relation.get(1)instanceof VarGraphNode) {
+			propertyVars.add(relation.get(1).toString());
+		}
 		for (int i = 0; i < 3; i++) {
 			if(i==1 && !(relation.get(i) instanceof VarGraphNode)) {
 				continue;
 			}
+			
 			if (!path.contains(relation.get(i))) {
 				path.add((GraphNode) relation.get(i));
 				OWLSeqNode child = new OWLSeqNode();

@@ -52,7 +52,7 @@ public class GroupOWLNode implements OWLNode {
 			childStart = childStart.split("\\s+")[0];
 		}
 
-		if (rightParts.length > 1 && rightParts[rightParts.length - 2].toLowerCase().equals("value")
+		if (rightParts.length > 1 && rightParts[rightParts.length - 2].toLowerCase().equals("some")
 				&& rightParts[rightParts.length - 1].trim().equals(childStart.trim())) {
 			//TODO
 			GroupOWLNode exchange = new GroupOWLNode();
@@ -74,7 +74,7 @@ public class GroupOWLNode implements OWLNode {
 		else if(rightNode.getValue().trim().endsWith(")") && leftNode.getValue().trim().startsWith("(")) {
 			GroupOWLNode newChild = new GroupOWLNode();
 			newChild.setChild(child);
-			newChild.setParent(new BaseOWLNode("VALUE "));
+			newChild.setParent(new BaseOWLNode("SOME"));
 			child = newChild;
 		}
 	return getValue();
@@ -119,6 +119,7 @@ public class GroupOWLNode implements OWLNode {
 				if(last==null) {
 					return getLastBaseNode(parGroup.parent);
 				}
+				return last;
 			}
 		}
 		return null;

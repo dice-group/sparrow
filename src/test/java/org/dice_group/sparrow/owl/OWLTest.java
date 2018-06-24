@@ -31,7 +31,7 @@ public class OWLTest {
 		data.add(new Object[] {"rule1 B", "rule1 B"});
 		data.add(new Object[] {"(rule1 SOME (rule2 C))", "rule1 SOME (rule2 C)"});
 		data.add(new Object[] {"rule1 SOME (rule2 C)", "rule1 SOME (rule2 C)"});
-		data.add(new Object[] {"rule1 VALUE B (B AND (rule2 C))", "rule1 SOME (B AND (rule2 C))"});
+		data.add(new Object[] {"rule1 SOME (B AND (rule2 C))", "rule1 SOME (B AND (rule2 C))"});
 		return data;
 	}
 	
