@@ -57,8 +57,7 @@ public class Main {
 	}
 	
 	public static void print(String sparql, String owl, PrintWriter pw) {
-		pw.print("\"" + sparql + "\";");
-		if(owl.contains(""))
+		pw.print("\"" + sparql + "\",");
 		pw.println("\"" + owl + "\"");
 	}
 
