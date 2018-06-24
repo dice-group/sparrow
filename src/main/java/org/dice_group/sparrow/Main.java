@@ -37,6 +37,7 @@ public class Main {
 				PrintWriter pw = new PrintWriter(outputFile)) {
 			String query;
 			Sparql2Owl bridge = new Sparql2Owl(ruleFile, dismissURIQuotes);
+			pw.println("sparql,owl");
 			while ((query = reader.readLine()) != null) {
 				String owl = bridge.convertSparqlQuery(query);
 				if (!owl.isEmpty()) {
