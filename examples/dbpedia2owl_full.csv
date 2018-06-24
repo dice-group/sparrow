@@ -1,0 +1,944 @@
+sparql,owl
+"SELECT ?uri ?uri1 ?abstract WHERE { <http://dbpedia.org/resource/Category:Iron_Age_Europe> <http://www.w3.org/2004/02/skos/core#broader> ?uri . ?uri <http://www.w3.org/2004/02/skos/core#broader> ?uri1 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME http://dbpedia.org/resource/Category:Iron_Age_Europe)) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME Thing ))"
+"SELECT ?n WHERE { { { <http://dbpedia.org/resource/Porsche> <http://www.w3.org/2004/02/skos/core#subject> ?sub . ?n <http://www.w3.org/2004/02/skos/core#broader> ?sub } } } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#broader SOME ((Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Porsche)))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Linga%2C_Muckle_Roe> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Linga%2C_Muckle_Roe))"
+"SELECT ?name WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name ; a <http://dbpedia.org/ontology/Artist> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain> ; <http://dbpedia.org/property/dateOfBirth> ?nacimiento } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT ( http://dbpedia.org/ontology/nationality SOME http://dbpedia.org/resource/Spain )) AND (Thing THAT ( http://dbpedia.org/property/dateOfBirth SOME Thing )))))"
+"SELECT ?sl ?ml ?img ?l WHERE { ?s <http://xmlns.com/foaf/0.1/depiction> ?img ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings> ; <http://www.w3.org/2000/01/rdf-schema#label> ?sl ; <http://dbpedia.org/property/museum> ?m . ?m <http://www.w3.org/2000/01/rdf-schema#label> ?ml . ?s <http://dbpedia.org/property/city> ?l } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/depiction SOME Thing )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings )) AND (Thing THAT (http://dbpedia.org/property/museum SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))))) AND (Thing THAT ( http://dbpedia.org/property/city SOME Thing )))))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_film_actors> } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_film_actors )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Coll> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Coll))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Staritsa> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Staritsa))"
+"SELECT ?x ?y WHERE { ?x ?y <http://dbpedia.org/resource/Berlin> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Berlin))"
+"SELECT * WHERE { { ?isValueOf ?property <http://dbpedia.org/resource/Barack_Obama> } } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Barack_Obama))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Crowlin_Islands> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Crowlin_Islands))"
+"SELECT * WHERE { ?Person <http://dbpedia.org/property/resides> <http://dbpedia.org/resource/London> ; <http://dbpedia.org/property/resides> ?Wohnort ; <http://dbpedia.org/property/weight> ?Weight } ","(Thing THAT ( http://dbpedia.org/property/resides SOME http://dbpedia.org/resource/London )) AND (Thing THAT ( http://dbpedia.org/property/resides SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing ))"
+"SELECT ?state ?flower WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:States_of_the_United_States> ; <http://dbpedia.org/property/flower> ?flower } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:States_of_the_United_States )) AND (Thing THAT ( http://dbpedia.org/property/flower SOME Thing ))"
+"SELECT * WHERE { ?id a <http://dbpedia.org/ontology/Film> . ?select <http://dbpedia.org/property/title> ?ft . ?id <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?sp WHERE { ?sp a <http://dbpedia.org/ontology/SoccerPlayer> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/SoccerPlayer ))"
+"SELECT ?capital WHERE { ?country <http://dbpedia.org/property/capital> ?capital } ","ObjectProperty: http://dbpedia.org/property/capitalInverse 
+   inverseOf http://dbpedia.org/property/capital
+(Thing THAT (http://dbpedia.org/property/capitalInverse SOME Thing))"
+"SELECT * WHERE { ?s1 <http://www.w3.org/2004/02/skos/core#broader> ?s2 . ?s3 <http://www.w3.org/2004/02/skos/core#broader> ?s1 . ?s4 <http://www.w3.org/2004/02/skos/core#broader> ?s3 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME Thing )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing))"
+"SELECT ?uri ?uri1 ?abstract ?uri2 WHERE { <http://dbpedia.org/resource/Category:Iron_Age_Europe> <http://www.w3.org/2004/02/skos/core#broader> ?uri . ?uri <http://www.w3.org/2004/02/skos/core#broader> ?uri1 . ?uri1 <http://www.w3.org/2004/02/skos/core#broader> ?uri2 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME http://dbpedia.org/resource/Category:Iron_Age_Europe)) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broader SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME Thing )))))"
+"SELECT ?x WHERE { ?x <http://www.georss.org/georss/point> ?z } ","(Thing THAT ( http://www.georss.org/georss/point SOME Thing ))"
+"SELECT ?m WHERE { ?s <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Surrealist_paintings> ; <http://dbpedia.org/property/museum> ?m } ","ObjectProperty: http://dbpedia.org/property/museumInverse 
+   inverseOf http://dbpedia.org/property/museum
+(Thing THAT (http://dbpedia.org/property/museumInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Surrealist_paintings )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Canna%2C_Scotland> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Canna%2C_Scotland))"
+"SELECT ?props1 ?values1 WHERE { { ?values1 ?props1 <http://dbpedia.org/resource/Berlin> } } ","((Thing SOME http://dbpedia.org/resource/Berlin))"
+"SELECT ?person WHERE { ?person <http://dbpedia.org/property/deathDate> ?deathDate } ","(Thing THAT ( http://dbpedia.org/property/deathDate SOME Thing ))"
+"SELECT ?label WHERE { ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders )))))"
+"SELECT * WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name ; a <http://dbpedia.org/ontology/Artist> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain> ; <http://dbpedia.org/ontology/birthDate> ?nacimiento } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT ( http://dbpedia.org/ontology/nationality SOME http://dbpedia.org/resource/Spain )) AND (Thing THAT ( http://dbpedia.org/ontology/birthDate SOME Thing ))"
+"SELECT ?page ?name WHERE { ?x <http://xmlns.com/foaf/0.1/page> ?page ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/pageInverse 
+   inverseOf http://xmlns.com/foaf/0.1/page
+(Thing THAT (http://xmlns.com/foaf/0.1/pageInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )))))"
+"SELECT ?p ?n ?l WHERE { ?p <http://dbpedia.org/property/residence> ?l ; <http://xmlns.com/foaf/0.1/name> ?n . ?l <http://www.w3.org/2000/01/rdf-schema#label> "Brazil"@en } ","(Thing THAT (http://dbpedia.org/property/residence SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Brazil"@en ))))) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kyshtym> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kyshtym))"
+"SELECT ?property ?hasValue ?isValueOf WHERE { { ?isValueOf ?property <http://dbpedia.org/resource/Barack_Obama> } } ","((Thing SOME http://dbpedia.org/resource/Barack_Obama))"
+"SELECT * WHERE { ?x a <http://dbpedia.org/ontology/Film> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film ))"
+"SELECT * WHERE { ?subject <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12> . ?episode <http://dbpedia.org/property/blackboard> ?chalkboard_gag } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12 ))"
+"SELECT ?label WHERE { <http://dbpedia.org/resource/Asturias> <http://www.w3.org/2000/01/rdf-schema#label> ?label } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME http://dbpedia.org/resource/Asturias))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Nagorno"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Nagorno"@en ))"
+"SELECT ?name ?birth ?death ?person WHERE { ?person <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Poland> ; <http://dbpedia.org/ontology/birthDate> ?birth ; <http://xmlns.com/foaf/0.1/name> ?name ; <http://dbpedia.org/ontology/deathDate> ?death } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/birthPlace SOME http://dbpedia.org/resource/Poland )) AND (Thing THAT ( http://dbpedia.org/ontology/birthDate SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/deathDate SOME Thing )))))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Blues> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Rock_and_roll> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Rockabilly> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Blues )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Rock_and_roll )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Rockabilly ))"
+"SELECT ?s ?o WHERE { ?s <http://dbpedia.org/ontology/casNumber> ?o } ","(Thing THAT ( http://dbpedia.org/ontology/casNumber SOME Thing ))"
+"SELECT ?s ?o WHERE { ?s <http://dbpedia.org/ontology/pubchem> ?o } ","(Thing THAT ( http://dbpedia.org/ontology/pubchem SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Livny> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Livny))"
+"SELECT ?a WHERE { ?a a ?Person } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT * WHERE { ?book <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Computer_books> ; <http://xmlns.com/foaf/0.1/name> ?title } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Computer_books )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?name WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?prop ?m WHERE { ?subject <http://dbpedia.org/property/starring> <http://dbpedia.org/resource/Tom_Cruise> ; <http://dbpedia.org/property/director> ?prop ; <http://dbpedia.org/property/title> ?m } ","ObjectProperty: http://dbpedia.org/property/directorInverse 
+   inverseOf http://dbpedia.org/property/director
+(Thing THAT (http://dbpedia.org/property/directorInverse SOME ((Thing THAT ( http://dbpedia.org/property/starring SOME http://dbpedia.org/resource/Tom_Cruise )) AND (Thing THAT ( http://dbpedia.org/property/title SOME Thing )))))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Artist> . ?c a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Jean_Reno> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Jean_Reno )))))"
+"SELECT ?name WHERE { ?name a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT * WHERE { { ?a <http://www.w3.org/2000/01/rdf-schema#label> "Wanpisu"@en ; <http://dbpedia.org/property/redirect> ?named } } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Wanpisu"@en )) AND (Thing THAT ( http://dbpedia.org/property/redirect SOME Thing ))"
+"SELECT * WHERE { ?id a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/property/title> ?ft ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/property/title SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?name ?birth ?death ?person WHERE { ?person <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Berlin> ; <http://dbpedia.org/ontology/birthDate> ?birth ; <http://xmlns.com/foaf/0.1/name> ?name ; <http://dbpedia.org/ontology/deathDate> ?death } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/birthPlace SOME http://dbpedia.org/resource/Berlin )) AND (Thing THAT ( http://dbpedia.org/ontology/birthDate SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/deathDate SOME Thing )))))"
+"SELECT * WHERE { ?place a <http://dbpedia.org/ontology/Place> ; a <http://www.opengis.net/gml/_Feature> ; <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude ; <http://www.w3.org/2000/01/rdf-schema#label> ?place_name } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Place )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://www.opengis.net/gml/_Feature )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing_name ))"
+"SELECT * WHERE { ?s <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:American_poker_players> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:American_poker_players ))"
+"SELECT * WHERE { ?resource <http://dbpedia.org/ontology/developer> ?value } ","(Thing THAT ( http://dbpedia.org/ontology/developer SOME Thing ))"
+"SELECT ?disease ?pred WHERE { ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> ; ?pred "Asthma"@en } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders )) AND (Thing THAT ( Thing SOME "Asthma"@en ))"
+"SELECT ?film WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Films_set_in_New_York_City> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Audrey_Hepburn> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Films_set_in_New_York_City )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Audrey_Hepburn ))"
+"SELECT * WHERE { ?Person <http://dbpedia.org/property/resides> <http://dbpedia.org/resource/Greenwich%2C_Connecticut> ; <http://dbpedia.org/property/resides> ?Wohnort ; <http://dbpedia.org/property/weight> ?Weight } ","(Thing THAT ( http://dbpedia.org/property/resides SOME http://dbpedia.org/resource/Greenwich%2C_Connecticut )) AND (Thing THAT ( http://dbpedia.org/property/resides SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing ))"
+"SELECT ?s WHERE { ?s a <http://dbpedia.org/ontology/Actor> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Actor ))"
+"SELECT ?ven ?esp WHERE { ?ven <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Venezuela> . ?esp <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Spain> . ?ven <http://dbpedia.org/property/birthdate> ?fecha . ?esp <http://dbpedia.org/property/birthdate> ?fecha } ","(Thing THAT ( http://dbpedia.org/property/birthplace SOME http://dbpedia.org/resource/Venezuela )) AND (Thing THAT ( http://dbpedia.org/property/birthdate SOME Thing ))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/Washington> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/Washington )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT ?county WHERE { ?county <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Cities_in_Texas> ; ?y <http://dbpedia.org/resource/Category:County_seats_in_Texas> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Cities_in_Texas )) AND (Thing THAT (Thing SOME http://dbpedia.org/resource/Category:County_seats_in_Texas))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Insulated-gate_bipolar_transistor> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Insulated-gate_bipolar_transistor))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kovrov> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kovrov))"
+"SELECT ?county WHERE { ?county <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Cities_in_Texas> ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:County_seats_in_Texas> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Cities_in_Texas )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:County_seats_in_Texas ))"
+"SELECT * WHERE { ?s1 <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Animals> . ?s3 <http://www.w3.org/2004/02/skos/core#broader> ?s1 . ?s4 <http://www.w3.org/2004/02/skos/core#broader> ?s3 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Animals )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing))"
+"SELECT * WHERE { ?id a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/property/label> ?ft ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/property/label SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?a ?b ?c WHERE { <http://dbpedia.org/resource/Peugeot> ?b ?c . ?a <http://xmlns.com/foaf/0.1/name> "Peugeot S.A."@en } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME "Peugeot S.A."@en ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Petukhovo> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Petukhovo))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Pavlovo%2C_Nizhny_Novgorod_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Pavlovo%2C_Nizhny_Novgorod_Oblast))"
+"SELECT ?x ?a ?b WHERE { ?x <http://www.georss.org/georss/point> ?z ; a <http://dbpedia.org/ontology/Place> ; ?a ?b } ","(Thing THAT ( http://www.georss.org/georss/point SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Place )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?actors WHERE { ?actors a <http://dbpedia.org/ontology/Actor> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Actor ))"
+"SELECT ?s ?Concept WHERE { ?s a ?Concept } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?disease WHERE { ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> ; <http://dbpedia.org/property/meshname> "Asthma"@en } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders )) AND (Thing THAT ( http://dbpedia.org/property/meshname SOME "Asthma"@en ))"
+"SELECT ?s ?abstract WHERE { <http://dbpedia.org/resource/Knut_Hamsun> <http://dbpedia.org/ontology/abstract> ?abstract . ?s ?p ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/abstractInverse 
+   inverseOf http://dbpedia.org/ontology/abstract
+(Thing THAT (Thing SOME ((Thing THAT (http://dbpedia.org/ontology/abstractInverse SOME http://dbpedia.org/resource/Knut_Hamsun)))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Bogorodsk%2C_Nizhny_Novgorod_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Bogorodsk%2C_Nizhny_Novgorod_Oblast))"
+"SELECT * WHERE { <http://dbpedia.org/resource/United_States> a <http://dbpedia.org/ontology/Country> ; ?p ?o } ","((Thing SOME Thing))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME Thing))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Whiskey"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Whiskey"@en ))"
+"SELECT ?m WHERE { ?s <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Pablo_Picasso_paintings> ; <http://dbpedia.org/property/museum> ?m } ","ObjectProperty: http://dbpedia.org/property/museumInverse 
+   inverseOf http://dbpedia.org/property/museum
+(Thing THAT (http://dbpedia.org/property/museumInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Pablo_Picasso_paintings )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kholm%2C_Kholmsky_District%2C_Novgorod_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kholm%2C_Kholmsky_District%2C_Novgorod_Oblast))"
+"SELECT ?name WHERE { ?name a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT ?n WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?n } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?b WHERE { ?b a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/The_Beatles> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/musicComposer SOME http://dbpedia.org/resource/The_Beatles ))"
+"SELECT ?s WHERE { ?s a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT ?name ?date WHERE { ?name <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/The_Beatles> ; a <http://dbpedia.org/ontology/Album> ; <http://dbpedia.org/ontology/releaseDate> ?date } ","(Thing THAT ( http://dbpedia.org/ontology/artist SOME http://dbpedia.org/resource/The_Beatles )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Album )) AND (Thing THAT ( http://dbpedia.org/ontology/releaseDate SOME Thing ))"
+"SELECT * WHERE { ?player <http://dbpedia.org/property/nationalteam> <http://dbpedia.org/resource/Germany_national_football_team> ; <http://dbpedia.org/property/currentclub> <http://dbpedia.org/resource/FC_Bayern_Munich> } ","(Thing THAT ( http://dbpedia.org/property/nationalteam SOME http://dbpedia.org/resource/Germany_national_football_team )) AND (Thing THAT ( http://dbpedia.org/property/currentclub SOME http://dbpedia.org/resource/FC_Bayern_Munich ))"
+"SELECT ?shireCounty WHERE { <http://dbpedia.org/resource/Stewkley> <http://dbpedia.org/property/shireCounty> ?shireCounty } ","ObjectProperty: http://dbpedia.org/property/shireCountyInverse 
+   inverseOf http://dbpedia.org/property/shireCounty
+(Thing THAT (http://dbpedia.org/property/shireCountyInverse SOME http://dbpedia.org/resource/Stewkley))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Crown_Dependency_of_Forvik> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Crown_Dependency_of_Forvik))"
+"SELECT ?Person WHERE { ?Person <http://xmlns.com/foaf/0.1/name> ?date } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?places WHERE { { ?places <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Munich> ; a <http://dbpedia.org/ontology/Building> } } ","(Thing THAT ( http://dbpedia.org/ontology/city SOME http://dbpedia.org/resource/Munich )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Building ))"
+"SELECT ?band WHERE { ?band a <http://dbpedia.org/ontology/Band> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band ))"
+"SELECT ?x WHERE { <http://en.wikipedia.org/wiki/South_Korea> <http://xmlns.com/foaf/0.1/primaryTopic> ?x } ","ObjectProperty: http://xmlns.com/foaf/0.1/primaryTopicInverse 
+   inverseOf http://xmlns.com/foaf/0.1/primaryTopic
+(Thing THAT (http://xmlns.com/foaf/0.1/primaryTopicInverse SOME http://en.wikipedia.org/wiki/South_Korea))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Buildings_and_structures_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Visitor_attractions_in_France> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Buildings_and_structures_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Visitor_attractions_in_France ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Antonio_Vivaldi> <http://dbpedia.org/property/filename> ?p } ","ObjectProperty: http://dbpedia.org/property/filenameInverse 
+   inverseOf http://dbpedia.org/property/filename
+(Thing THAT (http://dbpedia.org/property/filenameInverse SOME http://dbpedia.org/resource/Antonio_Vivaldi))"
+"SELECT ?person ?description WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "Thomas MacGreevy"@en ; <http://www.w3.org/2000/01/rdf-schema#comment> ?description } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Thomas MacGreevy"@en )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#comment SOME Thing ))"
+"SELECT * WHERE { ?data a <http://dbpedia.org/ontology/FormulaOneRacer> . ?wins <http://dbpedia.org/ontology/wins> 10 } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/FormulaOneRacer ))"
+"SELECT ?city ?timezone WHERE { ?city a <http://dbpedia.org/ontology/City> ; <http://dbpedia.org/property/timezone> ?timezone } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City )) AND (Thing THAT ( http://dbpedia.org/property/timezone SOME Thing ))"
+"SELECT * WHERE { ?motorway a <http://dbpedia.org/ontology/Road> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Road ))"
+"SELECT ?x ?y WHERE { ?x ?y <http://dbpedia.org/resource/Bank> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Bank))"
+"SELECT ?b WHERE { ?b a <http://dbpedia.org/ontology/Artist> . <http://dbpedia.org/resource/The_Da_Vinci_Code_%28film%29> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Jean_Reno> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((http://dbpedia.org/resource/The_Da_Vinci_Code_%28film%29 THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Jean_Reno )))))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_film_directors> } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_film_directors )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Mogocha> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Mogocha))"
+"SELECT ?name ?weight ?birthdate WHERE { ?Person a <http://dbpedia.org/ontology/Model> ; <http://dbpedia.org/property/name> ?name ; <http://dbpedia.org/property/weight> ?weight ; <http://dbpedia.org/property/birthdate> ?birthdate } ","ObjectProperty: http://dbpedia.org/property/nameInverse 
+   inverseOf http://dbpedia.org/property/name
+(Thing THAT (http://dbpedia.org/property/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Model )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/birthdate SOME Thing )))))"
+"SELECT * WHERE { ?player <http://dbpedia.org/property/team> <http://dbpedia.org/resource/AC_Milan> } ","(Thing THAT ( http://dbpedia.org/property/team SOME http://dbpedia.org/resource/AC_Milan ))"
+"SELECT ?x ?z WHERE { ?x <http://www.w3.org/2000/01/rdf-schema#label> ?z } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT * WHERE { ?person a <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://xmlns.com/foaf/0.1/Person ))"
+"SELECT ?shireCounty WHERE { <http://dbpedia.org/resource/Loughborough> <http://dbpedia.org/property/shireCounty> ?shireCounty } ","ObjectProperty: http://dbpedia.org/property/shireCountyInverse 
+   inverseOf http://dbpedia.org/property/shireCounty
+(Thing THAT (http://dbpedia.org/property/shireCountyInverse SOME http://dbpedia.org/resource/Loughborough))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Partizansk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Partizansk))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003> <http://dbpedia.org/property/party> ?value ; <http://dbpedia.org/property/leader> ?l } ","ObjectProperty: http://dbpedia.org/property/partyInverse 
+   inverseOf http://dbpedia.org/property/party
+(Thing THAT (http://dbpedia.org/property/partyInverse SOME ((http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003 THAT ( http://dbpedia.org/property/leader SOME Thing )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/1_Hanover_Square> ?property ?value . ?property <http://www.w3.org/2000/01/rdf-schema#label> ?label } ","((Thing SOME Thing)) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT ?film ?person WHERE { ?film <http://dbpedia.org/ontology/director> ?person } ","(Thing THAT ( http://dbpedia.org/ontology/director SOME Thing ))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_composers> } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_composers )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/surname> ?surname } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Michael_Jackson THAT ( http://xmlns.com/foaf/0.1/surname SOME Thing )))))"
+"SELECT ?nome ?nascimento WHERE { <http://dbpedia.org/resource/Chris_Cooper_%28actor%29> <http://dbpedia.org/property/birthdate> ?nascimento ; <http://xmlns.com/foaf/0.1/name> ?nome } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Chris_Cooper_%28actor%29 THAT ( http://dbpedia.org/property/birthdate SOME Thing )))))"
+"SELECT ?p WHERE { <http://dbpedia.org/resource/The_Compleat_Beatles> ?p <http://dbpedia.org/ontology/Film> } ","ObjectProperty: ?pInverse 
+   inverseOf ?p
+((Thing SOME http://dbpedia.org/ontology/Film) AND (Thing SOME http://dbpedia.org/resource/The_Compleat_Beatles))"
+"SELECT ?cat ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat . ?m <http://dbpedia.org/property/museum> ?sub . ?sub <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME ((Thing THAT ( http://dbpedia.org/ontology/abstract SOME Thing )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kozelsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kozelsk))"
+"SELECT ?y ?z WHERE { <http://dbpedia.org/resource/Warren_Buffett> <http://dbpedia.org/ontology/occupation> ?y } ","ObjectProperty: http://dbpedia.org/ontology/occupationInverse 
+   inverseOf http://dbpedia.org/ontology/occupation
+(Thing THAT (http://dbpedia.org/ontology/occupationInverse SOME http://dbpedia.org/resource/Warren_Buffett))"
+"SELECT ?name WHERE { ?spacecraft <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Austrian_composers> } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Austrian_composers )))))"
+"SELECT ?place WHERE { ?place <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Restaurant> } ","(Thing THAT ( http://dbpedia.org/property/industry SOME http://dbpedia.org/resource/Restaurant ))"
+"SELECT ?property ?isValueOf WHERE { { ?isValueOf ?property <http://dbpedia.org/ontology/MusicalArtist> } } ","((Thing SOME http://dbpedia.org/ontology/MusicalArtist))"
+"SELECT ?state ?lat ?long WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Visitor_attractions_in_Zimbabwe> ; <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Visitor_attractions_in_Zimbabwe )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing ))"
+"SELECT * WHERE { { ?x a <http://dbpedia.org/ontology/Planet> } } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Planet ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Khalid_Sheikh_Mohammed> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Khalid_Sheikh_Mohammed))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Yuzhno-Sukhokumsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Yuzhno-Sukhokumsk))"
+"SELECT ?name ?movie WHERE { ?name a <http://dbpedia.org/ontology/Actor> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Actor ))"
+"SELECT ?x ?y WHERE { ?x <http://dbpedia.org/property/author> ?y } ","(Thing THAT ( http://dbpedia.org/property/author SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Aksay> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Aksay))"
+"SELECT ?name ?birth ?person WHERE { ?person <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/France> ; <http://dbpedia.org/ontology/birthDate> ?birth ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/birthPlace SOME http://dbpedia.org/resource/France )) AND (Thing THAT ( http://dbpedia.org/ontology/birthDate SOME Thing )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Isle_Martin> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Isle_Martin))"
+"SELECT ?abstract WHERE { <http://dbpedia.org/resource/Bruce_Springsteen> <http://dbpedia.org/ontology/alias> ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/aliasInverse 
+   inverseOf http://dbpedia.org/ontology/alias
+(Thing THAT (http://dbpedia.org/ontology/aliasInverse SOME http://dbpedia.org/resource/Bruce_Springsteen))"
+"SELECT * WHERE { ?id <http://dbpedia.org/ontology/starring> ?starring ; <http://dbpedia.org/ontology/director> ?director ; a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://dbpedia.org/ontology/starring SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/director SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/MusicalArtist> . ?c a <http://dbpedia.org/ontology/Film> . ?b <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/The_Beatles> . ?c <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/The_Beatles> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/ontology/associatedBand SOME http://dbpedia.org/resource/The_Beatles ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Spassk-Dalny> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Spassk-Dalny))"
+"SELECT ?s WHERE { ?s a <http://dbpedia.org/ontology/Film> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film ))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Film> . ?c a <http://dbpedia.org/ontology/Artist> . ?b <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/Clint_Eastwood> ; <http://dbpedia.org/ontology/starring> ?c } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/director SOME http://dbpedia.org/resource/Clint_Eastwood )) AND (Thing THAT (http://dbpedia.org/ontology/starring SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )))))"
+"SELECT * WHERE { ?city <http://www.w3.org/2000/01/rdf-schema#label> "Munich"@en ; a ?type } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Munich"@en )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT * WHERE { ?motorway a <http://dbpedia.org/ontology/Road> ; <http://dbpedia.org/ontology/length> ?length ; <http://xmlns.com/foaf/0.1/name> ?name } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Road )) AND (Thing THAT ( http://dbpedia.org/ontology/length SOME Thing )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?titulo WHERE { ?x a <http://dbpedia.org/ontology/Film> ; <http://xmlns.com/foaf/0.1/name> ?titulo } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )))))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:English_composers> } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:English_composers )))))"
+"SELECT * WHERE { ?x <http://www.w3.org/2000/01/rdf-schema#label> "Fred Durst"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Fred Durst"@en ))"
+"SELECT * WHERE { ?airport a <http://dbpedia.org/ontology/Airport> ; <http://dbpedia.org/ontology/iataLocationIdentifier> "IAD"@en } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Airport )) AND (Thing THAT ( http://dbpedia.org/ontology/iataLocationIdentifier SOME "IAD"@en ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Desnogorsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Desnogorsk))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT * WHERE { ?stuff <http://dbpedia.org/property/name> ?name ; <http://xmlns.com/foaf/0.1/page> ?page ; <http://dbpedia.org/property/linelength> ?value } ","(Thing THAT ( http://dbpedia.org/property/name SOME Thing )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/page SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/linelength SOME Thing ))"
+"SELECT ?Who ?a ?b WHERE { ?Who <http://www.w3.org/2000/01/rdf-schema#label> "Japan"@en ; ?a ?b } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Japan"@en )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/surname> ?surname ; <http://purl.org/dc/elements/1.1/description> ?des } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Michael_Jackson THAT ( http://xmlns.com/foaf/0.1/surname SOME Thing )) AND (http://dbpedia.org/resource/Michael_Jackson THAT ( http://purl.org/dc/elements/1.1/description SOME Thing )))))"
+"SELECT ?nome ?nascimento ?lugar WHERE { <http://dbpedia.org/resource/Chris_Cooper_%28actor%29> <http://dbpedia.org/property/birthdate> ?nascimento ; <http://xmlns.com/foaf/0.1/name> ?nome ; <http://dbpedia.org/property/birthplace> ?lugar } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Chris_Cooper_%28actor%29 THAT ( http://dbpedia.org/property/birthdate SOME Thing )) AND (http://dbpedia.org/resource/Chris_Cooper_%28actor%29 THAT ( http://dbpedia.org/property/birthplace SOME Thing )))))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/California> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/California )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT ?location WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en . ?location <http://dbpedia.org/property/namedFor> ?person } ","(Thing THAT (http://dbpedia.org/property/namedFor SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?name WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?s ?p ?abstract WHERE { ?s ?p <http://dbpedia.org/resource/Arendal> ; ?p ?abstract } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Arendal))"
+"SELECT ?class WHERE { <http://dbpedia.org/resource/Honda_Legend> <http://dbpedia.org/property/engine> ?class } ","ObjectProperty: http://dbpedia.org/property/engineInverse 
+   inverseOf http://dbpedia.org/property/engine
+(Thing THAT (http://dbpedia.org/property/engineInverse SOME http://dbpedia.org/resource/Honda_Legend))"
+"SELECT ?country ?city WHERE { ?country a <http://dbpedia.org/ontology/Town> ; <http://dbpedia.org/property/country> ?city } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Town )) AND (Thing THAT ( http://dbpedia.org/property/country SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Nor_Nakhichevan> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Nor_Nakhichevan))"
+"SELECT ?name ?car WHERE { ?name <http://dbpedia.org/ontology/manufacturer> <http://dbpedia.org/resource/Peugeot> ; a ?car } ","(Thing THAT ( http://dbpedia.org/ontology/manufacturer SOME http://dbpedia.org/resource/Peugeot )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?film ?person ?comm WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_films> ; <http://dbpedia.org/property/producer> ?person ; <http://www.w3.org/2000/01/rdf-schema#comment> ?comm } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_films )) AND (Thing THAT ( http://dbpedia.org/property/producer SOME Thing )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#comment SOME Thing ))"
+"SELECT ?ven ?esp ?fecha WHERE { ?ven <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Venezuela> . ?esp <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Spain> . ?ven <http://dbpedia.org/property/birthdate> ?fecha . ?esp <http://dbpedia.org/property/birthdate> ?fecha } ","(Thing THAT ( http://dbpedia.org/property/birthplace SOME http://dbpedia.org/resource/Venezuela )) AND (Thing THAT ( http://dbpedia.org/property/birthdate SOME Thing ))"
+"SELECT * WHERE { ?x a ?z } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT * WHERE { ?id a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Heston_Aerodrome> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Heston_Aerodrome))"
+"SELECT * WHERE { ?a ?b <http://dbpedia.org/resource/Lead_actress> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Lead_actress))"
+"SELECT ?film WHERE { ?film a <http://dbpedia.org/ontology/SportsTeam> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/SportsTeam ))"
+"SELECT * WHERE { ?product a <http://dbpedia.org/ontology/Aircraft> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Aircraft ))"
+"SELECT * WHERE { ?sujeto ?predicado <http://dbpedia.org/resource/Buenos_Aires> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Buenos_Aires))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Paula_Creamer> ?y ?z . ?z ?a ?b } ","((Thing SOME ((Thing THAT (Thing SOME Thing)))))"
+"SELECT ?name ?album WHERE { ?name <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/The_Beatles> . ?album a <http://dbpedia.org/ontology/Album> } ","(Thing THAT ( http://dbpedia.org/ontology/artist SOME http://dbpedia.org/resource/The_Beatles ))"
+"SELECT ?x WHERE { ?x a <http://dbpedia.org/ontology/Actor> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Actor ))"
+"SELECT ?p ?o WHERE { ?dbactor <http://www.w3.org/2000/01/rdf-schema#label> "Naomi Watts"@en ; ?p ?o } ","((Thing SOME Thing))"
+"SELECT ?prop ?object WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/presidentStart> ?start ; ?prop ?object } ","((Thing SOME Thing))"
+"SELECT * WHERE { ?a a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT ?s ?p WHERE { ?s ?p <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT (Thing SOME http://dbpedia.org/ontology/MusicalArtist))"
+"SELECT * WHERE { ?location <http://dbpedia.org/property/namedFor> ?person . ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en } ","(Thing THAT (http://dbpedia.org/property/namedFor SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?abstract WHERE { <http://dbpedia.org/resource/John_Squire> <http://dbpedia.org/ontology/birthDate> ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/birthDateInverse 
+   inverseOf http://dbpedia.org/ontology/birthDate
+(Thing THAT (http://dbpedia.org/ontology/birthDateInverse SOME http://dbpedia.org/resource/John_Squire))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Novokuybyshevsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Novokuybyshevsk))"
+"SELECT * WHERE { ?obj a ?qls } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?film ?person WHERE { ?film <http://dbpedia.org/ontology/imdbId> ?person } ","(Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing ))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Andean Community"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Andean Community"@en ))"
+"SELECT ?place WHERE { ?place a <http://dbpedia.org/ontology/Place> ; a <http://dbpedia.org/ontology/City> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Place )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City ))"
+"SELECT ?x ?a ?b WHERE { ?x ?z <http://dbpedia.org/ontology/Place> ; ?a ?b } ","(Thing THAT (Thing SOME http://dbpedia.org/ontology/Place)) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?y ?z WHERE { <http://dbpedia.org/resource/Warren_Buffett> <http://dbpedia.org/ontology/occupation> ?y . ?y <http://dbpedia.org/property/founder> ?z } ","ObjectProperty: http://dbpedia.org/ontology/occupationInverse 
+   inverseOf http://dbpedia.org/ontology/occupation
+(Thing THAT (http://dbpedia.org/ontology/occupationInverse SOME http://dbpedia.org/resource/Warren_Buffett)) AND (Thing THAT ( http://dbpedia.org/property/founder SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Fuaigh_Beag> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Fuaigh_Beag))"
+"SELECT ?surname ?name WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/surname> ?surname } ","ObjectProperty: http://xmlns.com/foaf/0.1/surnameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/surname
+(Thing THAT (http://xmlns.com/foaf/0.1/surnameInverse SOME ((http://dbpedia.org/resource/Michael_Jackson THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )))))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Rios"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Rios"@en ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Chebarkul> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Chebarkul))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/South_Uist> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/South_Uist))"
+"SELECT ?name ?birth ?death ?person WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name ; <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Prague> } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/birthPlace SOME http://dbpedia.org/resource/Prague )))))"
+"SELECT ?country ?city WHERE { ?country a <http://dbpedia.org/ontology/Country> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country ))"
+"SELECT ?state ?capital WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:German_state_capitals> ; <http://dbpedia.org/property/capital> ?capital } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:German_state_capitals )) AND (Thing THAT ( http://dbpedia.org/property/capital SOME Thing ))"
+"SELECT ?c WHERE { ?b a <http://dbpedia.org/ontology/Band> . ?c a <http://dbpedia.org/ontology/Film> . <http://dbpedia.org/resource/The_Quarrymen> <http://dbpedia.org/ontology/associatedBand> ?b . ?c <http://dbpedia.org/ontology/musicComposer> ?b } ","ObjectProperty: http://dbpedia.org/ontology/associatedBandInverse 
+   inverseOf http://dbpedia.org/ontology/associatedBand
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT (http://dbpedia.org/ontology/musicComposer SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band )) AND (Thing THAT (http://dbpedia.org/ontology/associatedBandInverse SOME http://dbpedia.org/resource/The_Quarrymen)))))"
+"SELECT ?m WHERE { ?s <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings> ; <http://dbpedia.org/property/museum> ?m } ","ObjectProperty: http://dbpedia.org/property/museumInverse 
+   inverseOf http://dbpedia.org/property/museum
+(Thing THAT (http://dbpedia.org/property/museumInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings )))))"
+"SELECT ?film ?y WHERE { ?film <http://dbpedia.org/property/inflow> ?t } ","(Thing THAT ( http://dbpedia.org/property/inflow SOME Thing ))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Artist> . ?c a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Jean_Reno> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Jean_Reno )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/United_Kingdom> a <http://dbpedia.org/ontology/Country> ; <http://dbpedia.org/ontology/capital> ?capital } ","ObjectProperty: http://dbpedia.org/ontology/capitalInverse 
+   inverseOf http://dbpedia.org/ontology/capital
+(Thing THAT (http://dbpedia.org/ontology/capitalInverse SOME ((http://dbpedia.org/resource/United_Kingdom THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )))))"
+"SELECT ?film WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Films_set_in_New_York_City> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Paul_Newman> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Films_set_in_New_York_City )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Paul_Newman ))"
+"SELECT ?film ?type WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Bucharest> ; a ?type } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Bucharest )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT * WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:American_films> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:American_films ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Windows_Malicious_Software_Removal_Tool> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Windows_Malicious_Software_Removal_Tool))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Mologa> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Mologa))"
+"SELECT ?city ?person WHERE { ?city a <http://dbpedia.org/ontology/Country> . ?person <http://dbpedia.org/property/placeOfDeath> ?city } ","ObjectProperty: http://dbpedia.org/property/placeOfDeathInverse 
+   inverseOf http://dbpedia.org/property/placeOfDeath
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )) AND (Thing THAT (http://dbpedia.org/property/placeOfDeathInverse SOME Thing))"
+"SELECT ?cat ?cat1 WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Buildings_and_structures_in_Europe> . ?cat1 <http://www.w3.org/2004/02/skos/core#broader> ?cat } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Buildings_and_structures_in_Europe )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing))"
+"SELECT ?cat ?sub ?abstract WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Museums_in_Paris> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat . ?m <http://dbpedia.org/property/museum> ?sub . ?sub <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Museums_in_Paris )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME ((Thing THAT ( http://dbpedia.org/ontology/abstract SOME Thing )))))"
+"SELECT ?s ?p WHERE { ?s ?p <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT (Thing SOME http://xmlns.com/foaf/0.1/Person))"
+"SELECT * WHERE { ?motorway a <http://dbpedia.org/ontology/Road> . ?product a <http://dbpedia.org/ontology/Software> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Road ))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/Germany> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/Germany )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT * WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en . ?location <http://dbpedia.org/property/namedFor> ?person } ","ObjectProperty: http://dbpedia.org/property/namedForInverse 
+   inverseOf http://dbpedia.org/property/namedFor
+(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT (http://dbpedia.org/property/namedForInverse SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/The_Cumbraes> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/The_Cumbraes))"
+"SELECT ?film ?y WHERE { ?film <http://www.w3.org/2000/01/rdf-schema#label> ?y } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT ?p ?o WHERE { ?dbactor <http://dbpedia.org/property/name> "Kate Winslet"@en ; ?p ?o } ","((Thing SOME Thing))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Artist> . ?c a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/George_Harrison> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/George_Harrison )))))"
+"SELECT ?lat ?long WHERE { <http://dbpedia.org/resource/Germany> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long } ","ObjectProperty: http://www.w3.org/2003/01/geo/wgs84_pos#latInverse 
+   inverseOf http://www.w3.org/2003/01/geo/wgs84_pos#lat
+(Thing THAT (http://www.w3.org/2003/01/geo/wgs84_pos#latInverse SOME ((http://dbpedia.org/resource/Germany THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )))))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> . ?product ?relation ?company ; a <http://dbpedia.org/ontology/Aircraft> } ","ObjectProperty: ?relationInverse 
+   inverseOf ?relation
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing  THAT (Thing SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Paruyr_Sevak%2C_Armenia> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Paruyr_Sevak%2C_Armenia))"
+"SELECT ?symptom ?property ?disease WHERE { { ?symptom ?property ?disease . ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> . ?symptom <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Symptoms> } } ","(Thing THAT (Thing SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders ))))) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Symptoms ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Soay_Sound> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Soay_Sound))"
+"SELECT ?s ?p WHERE { ?s ?p "Actor"@en } ","(Thing THAT ( Thing SOME "Actor"@en ))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003> <http://dbpedia.org/property/party> ?p ; <http://dbpedia.org/property/seats> ?s } ","ObjectProperty: http://dbpedia.org/property/partyInverse 
+   inverseOf http://dbpedia.org/property/party
+(Thing THAT (http://dbpedia.org/property/partyInverse SOME ((http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003 THAT ( http://dbpedia.org/property/seats SOME Thing )))))"
+"SELECT ?a ?b ?c WHERE { ?a a <http://dbpedia.org/ontology/Artist> . ?b a <http://dbpedia.org/ontology/Artist> . ?c a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/starring> ?a ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT (http://dbpedia.org/ontology/starring SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist ))))))))"
+"SELECT ?film WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Films_set_in_New_York_City> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Dennis_Hopper> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Films_set_in_New_York_City )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Dennis_Hopper ))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Band> . ?c a <http://dbpedia.org/ontology/Film> . <http://dbpedia.org/resource/The_Quarrymen> <http://dbpedia.org/ontology/associatedBand> ?b . ?c <http://dbpedia.org/ontology/musicComposer> ?b } ","ObjectProperty: http://dbpedia.org/ontology/associatedBandInverse 
+   inverseOf http://dbpedia.org/ontology/associatedBand
+ObjectProperty: http://dbpedia.org/ontology/musicComposerInverse 
+   inverseOf http://dbpedia.org/ontology/musicComposer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band )) AND (Thing THAT (http://dbpedia.org/ontology/associatedBandInverse SOME http://dbpedia.org/resource/The_Quarrymen)) AND (Thing THAT (http://dbpedia.org/ontology/musicComposerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/United_Kingdom> a <http://dbpedia.org/ontology/Country> ; <http://dbpedia.org/ontology/capital> ?capital ; ?p ?o } ","ObjectProperty: http://dbpedia.org/ontology/capitalInverse 
+   inverseOf http://dbpedia.org/ontology/capital
+(Thing THAT (http://dbpedia.org/ontology/capitalInverse SOME ((http://dbpedia.org/resource/United_Kingdom THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )) AND (http://dbpedia.org/resource/United_Kingdom THAT (Thing SOME Thing)))))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France ))"
+"SELECT ?person WHERE { ?person <http://dbpedia.org/property/deathDate> ?deathDate ; <http://dbpedia.org/property/birthDate> ?birthDate } ","(Thing THAT ( http://dbpedia.org/property/deathDate SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/birthDate SOME Thing ))"
+"SELECT * WHERE { ?named <http://www.w3.org/2000/01/rdf-schema#label> "Wanpisu"@en ; <http://dbpedia.org/property/redirect> ?re } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Wanpisu"@en )) AND (Thing THAT ( http://dbpedia.org/property/redirect SOME Thing ))"
+"SELECT ?lang ?nation ?com WHERE { ?lang a <http://dbpedia.org/ontology/Language> . ?nation <http://dbpedia.org/ontology/language> ?lang ; a <http://dbpedia.org/ontology/Country> ; <http://www.w3.org/2000/01/rdf-schema#comment> ?com } ","ObjectProperty: http://dbpedia.org/ontology/languageInverse 
+   inverseOf http://dbpedia.org/ontology/language
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Language )) AND (Thing THAT (http://dbpedia.org/ontology/languageInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#comment SOME Thing )))))"
+"SELECT ?peli ?actriz WHERE { ?peli <http://dbpedia.org/property/starring> ?actriz . ?actriz <http://xmlns.com/foaf/0.1/name> "Danny Nucci"@en } ","(Thing THAT (http://dbpedia.org/property/starring SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/name SOME "Danny Nucci"@en )))))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Heavy_metal_music> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Hard_rock> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Thrash_metal> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Speed_metal> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Heavy_metal_music )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Hard_rock )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Thrash_metal )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Speed_metal ))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat . ?m <http://dbpedia.org/property/museum> ?sub } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME Thing))"
+"SELECT ?x0 ?m WHERE { <http://dbpedia.org/resource/Johnny_Depp> ?m ?x0 } ","ObjectProperty: ?mInverse 
+   inverseOf ?m
+(Thing  THAT (Thing SOME http://dbpedia.org/resource/Johnny_Depp))"
+"SELECT ?name ?birth ?death ?person WHERE { ?city a <http://dbpedia.org/ontology/City> ; <http://www.w3.org/2000/01/rdf-schema#label> ?name } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City )))))"
+"SELECT ?a WHERE { ?a a ?Person } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?city WHERE { ?city a <http://dbpedia.org/ontology/City> ; <http://dbpedia.org/property/timezone> ?timezone } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City )) AND (Thing THAT ( http://dbpedia.org/property/timezone SOME Thing ))"
+"SELECT ?n WHERE { <http://dbpedia.org/resource/Porsche> <http://www.w3.org/2004/02/skos/core#subject> ?sub . ?n <http://www.w3.org/2004/02/skos/core#broader> ?sub } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#broader SOME ((Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Porsche)))))"
+"SELECT ?x ?a ?b WHERE { ?x <http://www.georss.org/georss/point> ?z . ?a ?b ?x } ","ObjectProperty: ?bInverse 
+   inverseOf ?b
+(Thing THAT ( http://www.georss.org/georss/point SOME Thing )) AND (Thing  THAT (Thing SOME Thing))"
+"SELECT ?x ?p WHERE { { ?x a <http://dbpedia.org/ontology/MusicalArtist> . ?p <http://dbpedia.org/ontology/starring> ?x } } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME Thing))"
+"SELECT ?x0 WHERE { ?k <http://dbpedia.org/ontology/occupation> ?x0 } ","ObjectProperty: http://dbpedia.org/ontology/occupationInverse 
+   inverseOf http://dbpedia.org/ontology/occupation
+(Thing THAT (http://dbpedia.org/ontology/occupationInverse SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Izobilny> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Izobilny))"
+"SELECT ?person WHERE { ?person <http://dbpedia.org/ontology/notableIdea> ?value } ","(Thing THAT ( http://dbpedia.org/ontology/notableIdea SOME Thing ))"
+"SELECT ?x ?a ?b ?c ?d WHERE { ?x <http://www.georss.org/georss/point> ?z . ?a ?b ?x . ?x ?c ?d } ","ObjectProperty: ?bInverse 
+   inverseOf ?b
+(Thing THAT ( http://www.georss.org/georss/point SOME Thing )) AND (Thing  THAT (Thing SOME Thing)) AND (Thing THAT (Thing SOME Thing))"
+"SELECT * WHERE { ?x <http://www.w3.org/2000/01/rdf-schema#label> "Hale-Bopp"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Hale-Bopp"@en ))"
+"SELECT ?auteur ?p ?o WHERE { <http://dbpedia.org/resource/The_Da_Vinci_Code> <http://dbpedia.org/ontology/author> ?auteur . ?auteur ?p ?o } ","ObjectProperty: http://dbpedia.org/ontology/authorInverse 
+   inverseOf http://dbpedia.org/ontology/author
+(Thing THAT (http://dbpedia.org/ontology/authorInverse SOME http://dbpedia.org/resource/The_Da_Vinci_Code)) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?job ?birthLoc WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/occupation> ?job ; <http://dbpedia.org/property/birthPlace> ?birthLoc } ","ObjectProperty: http://dbpedia.org/property/occupationInverse 
+   inverseOf http://dbpedia.org/property/occupation
+(Thing THAT (http://dbpedia.org/property/occupationInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT ( http://dbpedia.org/property/birthPlace SOME Thing )))))"
+"SELECT ?place ?pred WHERE { ?place ?pred <http://dbpedia.org/resource/Restaurant> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Restaurant))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Eilean_Mhuire> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Eilean_Mhuire))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kashira> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kashira))"
+"SELECT ?y WHERE { <http://dbpedia.org/resource/Berlin> <http://www.w3.org/2004/02/skos/core#subject> ?y } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Berlin))"
+"SELECT ?places WHERE { { ?places <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Bucharest> ; a <http://dbpedia.org/ontology/Building> } } ","(Thing THAT ( http://dbpedia.org/ontology/city SOME http://dbpedia.org/resource/Bucharest )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Building ))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Ayrton Senna"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Ayrton Senna"@en ))"
+"SELECT * WHERE { ?player <http://dbpedia.org/property/position> <http://dbpedia.org/resource/Midfielder> } ","(Thing THAT ( http://dbpedia.org/property/position SOME http://dbpedia.org/resource/Midfielder ))"
+"SELECT ?a ?b WHERE { ?a a <http://dbpedia.org/ontology/Band> . ?b a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/musicComposer> ?a } ","ObjectProperty: http://dbpedia.org/ontology/musicComposerInverse 
+   inverseOf http://dbpedia.org/ontology/musicComposer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band )) AND (Thing THAT (http://dbpedia.org/ontology/musicComposerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )))))"
+"SELECT ?film ?type WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:History_of_Bucharest> ; a ?type } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:History_of_Bucharest )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?name ?email WHERE { ?person a <http://xmlns.com/foaf/0.1/Person> ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://xmlns.com/foaf/0.1/Person )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Nave_Island> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Nave_Island))"
+"SELECT ?name_la WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/givenname> ?name_la } ","ObjectProperty: http://xmlns.com/foaf/0.1/givennameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/givenname
+(Thing_la THAT (http://xmlns.com/foaf/0.1/givennameInverse SOME http://dbpedia.org/resource/Michael_Jackson))"
+"SELECT * WHERE { <http://dbpedia.org/resource/QuarkXPress> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/QuarkXPress))"
+"SELECT ?job WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/occupation> ?job ; <http://dbpedia.org/property/birthPlace> ?birthLoc } ","ObjectProperty: http://dbpedia.org/property/occupationInverse 
+   inverseOf http://dbpedia.org/property/occupation
+(Thing THAT (http://dbpedia.org/property/occupationInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT ( http://dbpedia.org/property/birthPlace SOME Thing )))))"
+"SELECT ?o WHERE { <http://dbpedia.org/resource/George_Harrison> a ?o } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/George_Harrison))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Privolzhsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Privolzhsk))"
+"SELECT * WHERE { ?subj ?a <http://dbpedia.org/resource/Human> ; ?b <http://dbpedia.org/resource/CD4> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Human)) AND (Thing THAT (Thing SOME http://dbpedia.org/resource/CD4))"
+"SELECT ?name ?image WHERE { ?spacecraft <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/depiction> ?image } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/depiction SOME Thing )))))"
+"SELECT ?uri ?uri1 ?abstract ?top WHERE { <http://dbpedia.org/resource/Category:Iron_Age_Europe> <http://www.w3.org/2004/02/skos/core#broader> ?uri . ?uri <http://www.w3.org/2004/02/skos/core#broader> ?uri1 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME http://dbpedia.org/resource/Category:Iron_Age_Europe)) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME Thing ))"
+"SELECT ?placeLat ?placeLong WHERE { <http://dbpedia.org/resource/Montebelluna> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?placeLat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?placeLong } ","ObjectProperty: http://www.w3.org/2003/01/geo/wgs84_pos#latInverse 
+   inverseOf http://www.w3.org/2003/01/geo/wgs84_pos#lat
+(Thing THAT (http://www.w3.org/2003/01/geo/wgs84_pos#latInverse SOME ((http://dbpedia.org/resource/Montebelluna THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )))))"
+"SELECT * WHERE { ?episode <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12> ; <http://dbpedia.org/property/blackboard> ?chalkboard_gag } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12 )) AND (Thing THAT ( http://dbpedia.org/property/blackboard SOME Thing_gag ))"
+"SELECT ?lat ?long WHERE { <http://dbpedia.org/resource/Norway> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long } ","ObjectProperty: http://www.w3.org/2003/01/geo/wgs84_pos#latInverse 
+   inverseOf http://www.w3.org/2003/01/geo/wgs84_pos#lat
+(Thing THAT (http://www.w3.org/2003/01/geo/wgs84_pos#latInverse SOME ((http://dbpedia.org/resource/Norway THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )))))"
+"SELECT ?label ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label ; <http://xmlns.com/foaf/0.1/page> <http://en.wikipedia.org/wiki/Java_%28programming_language%29> } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/page SOME http://en.wikipedia.org/wiki/Java_%28programming_language%29 )))))"
+"SELECT * WHERE { ?select a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/property/title> ?ft . ?id <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/property/title SOME Thing ))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Blues> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Rock_and_roll> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Blues )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Rock_and_roll ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Inchkeith> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Inchkeith))"
+"SELECT ?x ?a ?b ?z WHERE { ?x <http://www.georss.org/georss/point> ?z . ?a ?b ?x } ","ObjectProperty: ?bInverse 
+   inverseOf ?b
+(Thing THAT ( http://www.georss.org/georss/point SOME Thing )) AND (Thing  THAT (Thing SOME Thing))"
+"SELECT ?b WHERE { ?c a <http://dbpedia.org/ontology/Band> . ?b a <http://dbpedia.org/ontology/Film> . <http://dbpedia.org/resource/The_Quarrymen> <http://dbpedia.org/ontology/associatedBand> ?c . ?b <http://dbpedia.org/ontology/musicComposer> ?c } ","ObjectProperty: http://dbpedia.org/ontology/associatedBandInverse 
+   inverseOf http://dbpedia.org/ontology/associatedBand
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT (http://dbpedia.org/ontology/musicComposer SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band )) AND (Thing THAT (http://dbpedia.org/ontology/associatedBandInverse SOME http://dbpedia.org/resource/The_Quarrymen)))))"
+"SELECT ?r1 WHERE { ?r1 <http://dbpedia.org/property/assembly> ?r2 } ","(Thing THAT ( http://dbpedia.org/property/assembly SOME Thing ))"
+"SELECT ?Anime ?Director WHERE { ?Anime <http://dbpedia.org/property/studio> <http://dbpedia.org/resource/Gainax> ; <http://dbpedia.org/property/director> ?Director } ","(Thing THAT ( http://dbpedia.org/property/studio SOME http://dbpedia.org/resource/Gainax )) AND (Thing THAT ( http://dbpedia.org/property/director SOME Thing ))"
+"SELECT * WHERE { ?subject <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12> ; <http://dbpedia.org/property/blackboard> ?chalkboard_gag } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12 )) AND (Thing THAT ( http://dbpedia.org/property/blackboard SOME Thing_gag ))"
+"SELECT * WHERE { ?episode <http://www.w3.org/2004/02/skos/core#subject> ?season ; <http://dbpedia.org/property/blackboard> ?chalkboard_gag } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/blackboard SOME Thing_gag ))"
+"SELECT ?disease ?pred WHERE { ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> ; <http://dbpedia.org/property/meshname> "Asthma"@en } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders )) AND (Thing THAT ( http://dbpedia.org/property/meshname SOME "Asthma"@en ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Zarechny%2C_Penza_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Zarechny%2C_Penza_Oblast))"
+"SELECT ?ven ?esp WHERE { ?ven <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Venezuela> . ?esp <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Spain> } ","(Thing THAT ( http://dbpedia.org/property/birthplace SOME http://dbpedia.org/resource/Venezuela ))"
+"SELECT * WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_films> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_films ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Uglegorsk%2C_Sakhalin_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Uglegorsk%2C_Sakhalin_Oblast))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/California> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/California )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT ?x0 WHERE { <http://dbpedia.org/resource/Pierce_Brosnan> ?n ?x0 } ","ObjectProperty: ?nInverse 
+   inverseOf ?n
+(Thing  THAT (Thing SOME http://dbpedia.org/resource/Pierce_Brosnan))"
+"SELECT ?movie WHERE { ?movie a <http://dbpedia.org/ontology/Film> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film ))"
+"SELECT ?inwoners WHERE { <http://dbpedia.org/resource/Amsterdam> <http://dbpedia.org/property/populationTotal> ?inwoners } ","ObjectProperty: http://dbpedia.org/property/populationTotalInverse 
+   inverseOf http://dbpedia.org/property/populationTotal
+(Thing THAT (http://dbpedia.org/property/populationTotalInverse SOME http://dbpedia.org/resource/Amsterdam))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Strunino> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Strunino))"
+"SELECT * WHERE { ?Person <http://dbpedia.org/property/resides> <http://dbpedia.org/resource/New_York> ; <http://dbpedia.org/property/resides> ?Wohnort ; <http://dbpedia.org/property/weight> ?Weight } ","(Thing THAT ( http://dbpedia.org/property/resides SOME http://dbpedia.org/resource/New_York )) AND (Thing THAT ( http://dbpedia.org/property/resides SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing ))"
+"SELECT ?film ?x ?y WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:American_films> ; ?x ?y } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:American_films )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Tourist"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Tourist"@en ))"
+"SELECT ?auteur ?age ?p ?o WHERE { <http://dbpedia.org/resource/The_Da_Vinci_Code> <http://dbpedia.org/ontology/author> ?auteur . ?auteur <http://dbpedia.org/property/dateOfBirth> ?age ; ?p ?o } ","ObjectProperty: http://dbpedia.org/ontology/authorInverse 
+   inverseOf http://dbpedia.org/ontology/author
+(Thing THAT (http://dbpedia.org/ontology/authorInverse SOME http://dbpedia.org/resource/The_Da_Vinci_Code)) AND (Thing THAT ( http://dbpedia.org/property/dateOfBirth SOME Thing )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?book ?author WHERE { ?book <http://dbpedia.org/property/author> ?author } ","(Thing THAT ( http://dbpedia.org/property/author SOME Thing ))"
+"SELECT ?s ?p WHERE { ?s ?p <http://dbpedia.org/resource/Steven_Spielberg> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Steven_Spielberg))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Virkie> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Virkie))"
+"SELECT ?b ?c WHERE { ?b a <http://dbpedia.org/ontology/Artist> . ?c a <http://dbpedia.org/ontology/Work> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/George_Harrison> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Work )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/George_Harrison )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Volsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Volsk))"
+"SELECT ?prop ?m WHERE { ?subject <http://dbpedia.org/property/starring> <http://dbpedia.org/resource/Tom_Cruise> ; <http://dbpedia.org/property/director> ?prop ; ?m _:b0 } ","ObjectProperty: http://dbpedia.org/property/directorInverse 
+   inverseOf http://dbpedia.org/property/director
+(Thing THAT (http://dbpedia.org/property/directorInverse SOME ((Thing THAT ( http://dbpedia.org/property/starring SOME http://dbpedia.org/resource/Tom_Cruise )) AND (Thing THAT (Thing SOME ?Thing)))))"
+"SELECT * WHERE { ?loc <http://www.w3.org/2000/01/rdf-schema#label> "Lansing (village), New York"@en ; ?x ?y } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Lansing (village))) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?state ?mtn ?lat ?long WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:States_of_the_United_States> ; <http://dbpedia.org/property/highestpoint> ?mtn . ?mtn <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:States_of_the_United_States )) AND (Thing THAT (http://dbpedia.org/property/highestpoint SOME ((Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )))))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Buildings_and_structures_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Visitor_attractions_in_France> . ?cat1 <http://www.w3.org/2004/02/skos/core#broader> ?cat . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Buildings_and_structures_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Visitor_attractions_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing)) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME Thing))"
+"SELECT ?person WHERE { ?person ?o <http://dbpedia.org/resource/Amsterdam> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Amsterdam))"
+"SELECT ?shireCounty WHERE { <http://dbpedia.org/resource/Glastonbury> <http://dbpedia.org/property/shireCounty> ?shireCounty } ","ObjectProperty: http://dbpedia.org/property/shireCountyInverse 
+   inverseOf http://dbpedia.org/property/shireCounty
+(Thing THAT (http://dbpedia.org/property/shireCountyInverse SOME http://dbpedia.org/resource/Glastonbury))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Chantilly%2C_Oise> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Chantilly%2C_Oise))"
+"SELECT * WHERE { ?x ?y <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT (Thing SOME http://xmlns.com/foaf/0.1/Person))"
+"SELECT * WHERE { ?player <http://dbpedia.org/property/position> <http://dbpedia.org/resource/Striker> } ","(Thing THAT ( http://dbpedia.org/property/position SOME http://dbpedia.org/resource/Striker ))"
+"SELECT ?shireCounty WHERE { <http://dbpedia.org/resource/Tring> <http://dbpedia.org/property/shireCounty> ?shireCounty } ","ObjectProperty: http://dbpedia.org/property/shireCountyInverse 
+   inverseOf http://dbpedia.org/property/shireCounty
+(Thing THAT (http://dbpedia.org/property/shireCountyInverse SOME http://dbpedia.org/resource/Tring))"
+"SELECT ?country ?latitude WHERE { ?country <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude } ","(Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/The_Calivari_Tale> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/The_Calivari_Tale))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Blues> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Blues ))"
+"SELECT ?y ?z WHERE { <http://dbpedia.org/resource/Ayrton_Senna> ?y ?z } ","((Thing SOME Thing))"
+"SELECT ?p ?o WHERE { <http://dbpedia.org/resource/The_Da_Vinci_Code> ?p ?o } ","((Thing SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Flodaigh%2C_Lewis> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Flodaigh%2C_Lewis))"
+"SELECT ?name ?birth ?death ?person WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name ; <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Berlin> } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/birthPlace SOME http://dbpedia.org/resource/Berlin )))))"
+"SELECT * WHERE { ?episode <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12> ; <http://dbpedia.org/property/blackboard> ?chalkboard_gag } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:The_Simpsons_episodes%2C_season_12 )) AND (Thing THAT ( http://dbpedia.org/property/blackboard SOME Thing_gag ))"
+"SELECT ?value WHERE { <http://dbpedia.org/resource/Lionel_Messi> <http://dbpedia.org/ontology/team> ?value } ","ObjectProperty: http://dbpedia.org/ontology/teamInverse 
+   inverseOf http://dbpedia.org/ontology/team
+(Thing THAT (http://dbpedia.org/ontology/teamInverse SOME http://dbpedia.org/resource/Lionel_Messi))"
+"SELECT ?x ?a ?Concept WHERE { ?x ?a ?Concept ; <http://www.georss.org/georss/point> ?z } ","(Thing THAT (Thing SOME Thing)) AND (Thing THAT ( http://www.georss.org/georss/point SOME Thing ))"
+"SELECT * WHERE { ?Person <http://dbpedia.org/property/resides> <http://dbpedia.org/resource/New_York> ; <http://dbpedia.org/property/resides> ?Wohnort } ","(Thing THAT ( http://dbpedia.org/property/resides SOME http://dbpedia.org/resource/New_York )) AND (Thing THAT ( http://dbpedia.org/property/resides SOME Thing ))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/California> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/California )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT * WHERE { ?x <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Capitals_in_Europe> ; <http://dbpedia.org/property/urbanPop> ?y } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Capitals_in_Europe )) AND (Thing THAT ( http://dbpedia.org/property/urbanPop SOME Thing ))"
+"SELECT ?n WHERE { ?x a <http://dbpedia.org/ontology/Film> ; <http://xmlns.com/foaf/0.1/name> ?n } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )))))"
+"SELECT * WHERE { ?a a <http://dbpedia.org/ontology/Band> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band ))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/New_York> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/New_York )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Biryuch> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Biryuch))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Snezhinsk> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Snezhinsk))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Economy"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Economy"@en ))"
+"SELECT ?title ?author WHERE { { ?title <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Science_fiction> } } ","(Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Science_fiction ))"
+"SELECT ?film WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Films_set_in_New_York_City> ; <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Frank_Sinatra> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Films_set_in_New_York_City )) AND (Thing THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Frank_Sinatra ))"
+"SELECT ?abstract WHERE { <http://dbpedia.org/resource/Bruce_Springsteen> <http://dbpedia.org/ontology/instrument> ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/instrumentInverse 
+   inverseOf http://dbpedia.org/ontology/instrument
+(Thing THAT (http://dbpedia.org/ontology/instrumentInverse SOME http://dbpedia.org/resource/Bruce_Springsteen))"
+"SELECT * WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?person ?placeOfBirth WHERE { ?person ?placeOfBirth <http://dbpedia.org/resource/Amsterdam> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Amsterdam))"
+"SELECT ?name ?actor WHERE { ?actor <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Belgian_film_actors> ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Belgian_film_actors )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Weisdale_Mill> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Weisdale_Mill))"
+"SELECT ?cat ?sub ?abstract WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat . ?m <http://dbpedia.org/property/museum> ?sub . ?sub <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME ((Thing THAT ( http://dbpedia.org/ontology/abstract SOME Thing )))))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Hard_rock> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Thrash_metal> ; <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Speed_metal> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Hard_rock )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Thrash_metal )) AND (Thing THAT ( http://dbpedia.org/property/genre SOME http://dbpedia.org/resource/Speed_metal ))"
+"SELECT ?cat ?sub ?abstract WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Museums_in_Paris> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Museums_in_Paris ))"
+"SELECT ?symptom ?property ?disease WHERE { { ?symptom ?property ?disease ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Symptoms> } } ","(Thing THAT (Thing SOME Thing)) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Symptoms ))"
+"SELECT ?b WHERE { ?b a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/Robin_Gibb> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/musicComposer SOME http://dbpedia.org/resource/Robin_Gibb ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Corvo_Island> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Corvo_Island))"
+"SELECT ?state ?mtn ?lat ?long WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Official_historical_monuments_of_France> ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long ; <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Official_historical_monuments_of_France )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing ))"
+"SELECT ?person ?job ?birthLoc WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/occupation> ?job ; <http://dbpedia.org/property/birthPlace> ?birthLoc } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT ( http://dbpedia.org/property/occupation SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/birthPlace SOME Thing ))"
+"SELECT ?name ?weight WHERE { ?Person a <http://dbpedia.org/ontology/Wrestler> ; <http://dbpedia.org/property/name> ?name ; <http://dbpedia.org/property/weight> ?weight } ","ObjectProperty: http://dbpedia.org/property/nameInverse 
+   inverseOf http://dbpedia.org/property/name
+(Thing THAT (http://dbpedia.org/property/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Wrestler )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing )))))"
+"SELECT ?state ?capital WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:States_of_the_United_States> ; <http://dbpedia.org/property/capital> ?capital } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:States_of_the_United_States )) AND (Thing THAT ( http://dbpedia.org/property/capital SOME Thing ))"
+"SELECT ?country ?latitude WHERE { ?country <http://www.w3.org/2000/01/rdf-schema#label> ?latitude } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Longay> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Longay))"
+"SELECT ?subject ?abstract WHERE { ?subject a <http://dbpedia.org/ontology/Building> ; <http://dbpedia.org/property/location> <http://dbpedia.org/resource/Greece> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Building )) AND (Thing THAT ( http://dbpedia.org/property/location SOME http://dbpedia.org/resource/Greece ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Munich> <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/abstractInverse 
+   inverseOf http://dbpedia.org/ontology/abstract
+(Thing THAT (http://dbpedia.org/ontology/abstractInverse SOME http://dbpedia.org/resource/Munich))"
+"SELECT ?Name WHERE { ?Person <http://dbpedia.org/property/placeOfBirth> <http://dbpedia.org/resource/Seattle> ; <http://dbpedia.org/property/name> ?Name } ","ObjectProperty: http://dbpedia.org/property/nameInverse 
+   inverseOf http://dbpedia.org/property/name
+(Thing THAT (http://dbpedia.org/property/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/placeOfBirth SOME http://dbpedia.org/resource/Seattle )))))"
+"SELECT ?s ?o WHERE { ?s <http://dbpedia.org/property/own> ?o } ","(Thing THAT ( http://dbpedia.org/property/own SOME Thing ))"
+"SELECT ?name ?surname WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/surname> ?surname } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Michael_Jackson THAT ( http://xmlns.com/foaf/0.1/surname SOME Thing )))))"
+"SELECT ?obj WHERE { ?obj a <http://dbpedia.org/ontology/City> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City ))"
+"SELECT ?cat ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat . ?m <http://dbpedia.org/property/museum> ?sub } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME Thing))"
+"SELECT ?loc WHERE { ?loc <http://dbpedia.org/property/commonName> "Fiji"@en } ","(Thing THAT ( http://dbpedia.org/property/commonName SOME "Fiji"@en ))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Nagorno - Karabakh"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Nagorno - Karabakh"@en ))"
+"SELECT ?person ?name WHERE { <http://dbpedia.org/resource/Amsterdam> <http://dbpedia.org/property/officialName> ?name . ?person ?placeOfBirth <http://dbpedia.org/resource/Amsterdam> } ","(Thing THAT (Thing SOME ((http://dbpedia.org/resource/Amsterdam THAT ( http://dbpedia.org/property/officialName SOME Thing )))))"
+"SELECT * WHERE { ?x a ?y } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?s ?abstract WHERE { ?s <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Arendal> ; ?p ?abstract } ","(Thing THAT ( http://dbpedia.org/property/birthplace SOME http://dbpedia.org/resource/Arendal )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Abovyan> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Abovyan))"
+"SELECT ?x ?b WHERE { ?x <http://www.georss.org/georss/point> ?z ; a ?b } ","(Thing THAT ( http://www.georss.org/georss/point SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT * WHERE { ?s ?p <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT (Thing SOME http://xmlns.com/foaf/0.1/Person))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "G7"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "G7"@en ))"
+"SELECT ?a ?b WHERE { ?a <http://www.w3.org/2004/02/skos/core#broader> ?b } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME Thing ))"
+"SELECT * WHERE { ?s <http://dbpedia.org/property/wikilink> <http://dbpedia.org/resource/Partner_%28business_rank%29> } ","(Thing THAT ( http://dbpedia.org/property/wikilink SOME http://dbpedia.org/resource/Partner_%28business_rank%29 ))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> . ?product <http://dbpedia.org/ontology/manufacturer> ?company ; a <http://dbpedia.org/ontology/Aircraft> } ","ObjectProperty: http://dbpedia.org/ontology/manufacturerInverse 
+   inverseOf http://dbpedia.org/ontology/manufacturer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT (http://dbpedia.org/ontology/manufacturerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Aircraft )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Munich> <http://dbpedia.org/ontology/abstract> ?abstract ; <http://www.w3.org/2000/01/rdf-schema#label> ?name } ","ObjectProperty: http://dbpedia.org/ontology/abstractInverse 
+   inverseOf http://dbpedia.org/ontology/abstract
+(Thing THAT (http://dbpedia.org/ontology/abstractInverse SOME ((http://dbpedia.org/resource/Munich THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing )))))"
+"SELECT ?presName ?z WHERE { ?presName <http://www.w3.org/2004/02/skos/core#subject> ?z } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME Thing ))"
+"SELECT * WHERE { ?game <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:First-person_shooters> ; <http://xmlns.com/foaf/0.1/name> ?title } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:First-person_shooters )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?name WHERE { <http://dbpedia.org/resource/Michael_Jackson> ?type <http://xmlns.com/foaf/0.1/Person> . ?person <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?a WHERE { ?a a <http://dbpedia.org/ontology/MusicalArtist> . <http://dbpedia.org/resource/Wasabi_%28film%29> <http://dbpedia.org/ontology/musicComposer> ?a } ","ObjectProperty: http://dbpedia.org/ontology/musicComposerInverse 
+   inverseOf http://dbpedia.org/ontology/musicComposer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist )) AND (Thing THAT (http://dbpedia.org/ontology/musicComposerInverse SOME http://dbpedia.org/resource/Wasabi_%28film%29))"
+"SELECT ?blackboard WHERE { ?s <http://dbpedia.org/property/men> ?blackboard } ","ObjectProperty: http://dbpedia.org/property/menInverse 
+   inverseOf http://dbpedia.org/property/men
+(Thing THAT (http://dbpedia.org/property/menInverse SOME Thing))"
+"SELECT * WHERE { ?airport a <http://dbpedia.org/ontology/Airport> ; <http://dbpedia.org/ontology/iataLocationIdentifier> "IAD"@en } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Airport )) AND (Thing THAT ( http://dbpedia.org/ontology/iataLocationIdentifier SOME "IAD"@en ))"
+"SELECT ?name ?birth ?death ?person WHERE { ?city a <http://dbpedia.org/ontology/City> ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:German_state_capitals> ; <http://www.w3.org/2000/01/rdf-schema#label> ?name } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:German_state_capitals )))))"
+"SELECT ?def WHERE { { ?disease <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Diseases_and_disorders> ; <http://dbpedia.org/property/meshname> "Asthma"@en ; <http://www.w3.org/2000/01/rdf-schema#comment> ?def } } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#commentInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#comment
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#commentInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Diseases_and_disorders )) AND (Thing THAT ( http://dbpedia.org/property/meshname SOME "Asthma"@en )))))"
+"SELECT ?object WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; ?prop ?object } ","ObjectProperty: ?propInverse 
+   inverseOf ?prop
+(Thing  THAT (Thing SOME Thing))"
+"SELECT * WHERE { ?x a <http://dbpedia.org/ontology/Actor> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Actor ))"
+"SELECT * WHERE { ?s a <http://dbpedia.org/ontology/Country> ; ?p ?o } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT * WHERE { ?company a <http://dbpedia.org/ontology/Organisation> ; <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/California> . ?product <http://dbpedia.org/ontology/developer> ?company ; a <http://dbpedia.org/ontology/Software> } ","ObjectProperty: http://dbpedia.org/ontology/developerInverse 
+   inverseOf http://dbpedia.org/ontology/developer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Organisation )) AND (Thing THAT ( http://dbpedia.org/ontology/foundationPlace SOME http://dbpedia.org/resource/California )) AND (Thing THAT (http://dbpedia.org/ontology/developerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Software )))))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "OSCE"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "OSCE"@en ))"
+"SELECT ?c ?label WHERE { ?c a <http://www.w3.org/2002/07/owl#Class> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://www.w3.org/2002/07/owl#Class )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Kogalym> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Kogalym))"
+"SELECT ?state ?lat ?long WHERE { ?state <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Official_historical_monuments_of_France> ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long ; <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Official_historical_monuments_of_France )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )) AND (Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#lat SOME Thing ))"
+"SELECT ?city WHERE { ?city a <http://dbpedia.org/ontology/City> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/City ))"
+"SELECT * WHERE { ?s1 <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Zoology> . ?s3 <http://www.w3.org/2004/02/skos/core#broader> ?s1 . ?s4 <http://www.w3.org/2004/02/skos/core#broader> ?s3 } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Zoology )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Raduzhny%2C_Vladimir_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Raduzhny%2C_Vladimir_Oblast))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Ulan-Ude> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Ulan-Ude))"
+"SELECT * WHERE { ?alias <http://dbpedia.org/property/redirect> ?city ; <http://www.w3.org/2000/01/rdf-schema#label> "Frankfurt"@en } ","(Thing THAT ( http://dbpedia.org/property/redirect SOME Thing )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Frankfurt"@en ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Ascrib_Islands> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Ascrib_Islands))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Chile> a ?o } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Chile))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/Band> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band ))"
+"SELECT ?b WHERE { ?b a <http://dbpedia.org/ontology/Artist> . <http://dbpedia.org/resource/Wasabi_%28film%29> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Jean_Reno> ; <http://dbpedia.org/ontology/starring> ?b } ","ObjectProperty: http://dbpedia.org/ontology/starringInverse 
+   inverseOf http://dbpedia.org/ontology/starring
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT (http://dbpedia.org/ontology/starringInverse SOME ((http://dbpedia.org/resource/Wasabi_%28film%29 THAT ( http://dbpedia.org/ontology/starring SOME http://dbpedia.org/resource/Jean_Reno )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003> ?a ?value . ?value <http://dbpedia.org/property/amsSeats> ?x } ","((Thing SOME ((Thing THAT ( http://dbpedia.org/property/amsSeats SOME Thing )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003> <http://dbpedia.org/property/party> ?party ; <http://dbpedia.org/property/seats> ?seat } ","ObjectProperty: http://dbpedia.org/property/partyInverse 
+   inverseOf http://dbpedia.org/property/party
+(Thing THAT (http://dbpedia.org/property/partyInverse SOME ((http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003 THAT ( http://dbpedia.org/property/seats SOME Thing )))))"
+"SELECT ?location WHERE { ?location <http://dbpedia.org/property/namedFor> ?person . ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en } ","(Thing THAT (http://dbpedia.org/property/namedFor SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?ville ?population WHERE { ?ville ?p ?o ; <http://dbpedia.org/property/population> ?population } ","(Thing THAT (Thing SOME Thing)) AND (Thing THAT ( http://dbpedia.org/property/population SOME Thing ))"
+"SELECT ?film WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Bucharest> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Bucharest ))"
+"SELECT * WHERE { ?motorway a <http://dbpedia.org/ontology/Road> ; <http://dbpedia.org/ontology/length> ?length } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Road )) AND (Thing THAT ( http://dbpedia.org/ontology/length SOME Thing ))"
+"SELECT * WHERE { ?motorway a <http://dbpedia.org/ontology/Road> ; <http://dbpedia.org/ontology/length> ?date } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Road )) AND (Thing THAT ( http://dbpedia.org/ontology/length SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Eilean_Ighe> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Eilean_Ighe))"
+"SELECT * WHERE { ?data a <http://dbpedia.org/ontology/FormulaOneRacer> ; <http://dbpedia.org/property/wins> 10 } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/FormulaOneRacer )) AND (Thing THAT ( http://dbpedia.org/property/wins SOME "10"^^http://www.w3.org/2001/XMLSchema#integer ))"
+"SELECT ?subject WHERE { ?subject a <http://dbpedia.org/ontology/Building> ; <http://dbpedia.org/property/location> <http://dbpedia.org/resource/Greece> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Building )) AND (Thing THAT ( http://dbpedia.org/property/location SOME http://dbpedia.org/resource/Greece ))"
+"SELECT ?fildm WHERE { ?fildm <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:French_films> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:French_films ))"
+"SELECT ?b ?c WHERE { ?b ?c "seoul"@en } ","(Thing THAT ( Thing SOME "seoul"@en ))"
+"SELECT ?sl ?ml ?img WHERE { ?s <http://xmlns.com/foaf/0.1/depiction> ?img ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings> ; <http://www.w3.org/2000/01/rdf-schema#label> ?sl ; <http://dbpedia.org/property/museum> ?m . ?m <http://www.w3.org/2000/01/rdf-schema#label> ?ml } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/depiction SOME Thing )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings )) AND (Thing THAT (http://dbpedia.org/property/museum SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))))))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Pabaigh_M%C3%B2r> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Pabaigh_M%C3%B2r))"
+"SELECT * WHERE { ?president <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Presidents_of_the_United_States> ; <http://dbpedia.org/ontology/activeYearsStartDate> ?startDate ; <http://dbpedia.org/ontology/activeYearsEndDate> ?endDate } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Presidents_of_the_United_States )) AND (Thing THAT ( http://dbpedia.org/ontology/activeYearsStartDate SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/activeYearsEndDate SOME Thing ))"
+"SELECT ?prop WHERE { ?subject <http://dbpedia.org/property/starring> <http://dbpedia.org/resource/Tom_Cruise> ; ?prop _:b0 } ","((Thing SOME ?Thing))"
+"SELECT ?s ?o WHERE { ?s <http://dbpedia.org/property/pubchem> ?o } ","(Thing THAT ( http://dbpedia.org/property/pubchem SOME Thing ))"
+"SELECT ?capital WHERE { ?country <http://www.w3.org/2000/01/rdf-schema#label> "United Kingdom"@en ; <http://dbpedia.org/property/capital> ?capital } ","ObjectProperty: http://dbpedia.org/property/capitalInverse 
+   inverseOf http://dbpedia.org/property/capital
+(Thing THAT (http://dbpedia.org/property/capitalInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "United Kingdom"@en )))))"
+"SELECT ?name WHERE { ?person a <http://xmlns.com/foaf/0.1/Person> ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://xmlns.com/foaf/0.1/Person )))))"
+"SELECT ?sl ?img WHERE { ?s <http://xmlns.com/foaf/0.1/depiction> ?img ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings> ; <http://www.w3.org/2000/01/rdf-schema#label> ?sl } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/depiction SOME Thing )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings )))))"
+"SELECT ?d WHERE { <http://dbpedia.org/resource/Uranus> <http://dbpedia.org/ontology/orbitalPeriod> ?d } ","ObjectProperty: http://dbpedia.org/ontology/orbitalPeriodInverse 
+   inverseOf http://dbpedia.org/ontology/orbitalPeriod
+(Thing THAT (http://dbpedia.org/ontology/orbitalPeriodInverse SOME http://dbpedia.org/resource/Uranus))"
+"SELECT ?ville ?population ?personne WHERE { ?ville <http://dbpedia.org/property/population> ?population . ?personne <http://dbpedia.org/property/birthplace> ?ville } ","ObjectProperty: http://dbpedia.org/property/birthplaceInverse 
+   inverseOf http://dbpedia.org/property/birthplace
+(Thing THAT ( http://dbpedia.org/property/population SOME Thing )) AND (Thing THAT (http://dbpedia.org/property/birthplaceInverse SOME Thing))"
+"SELECT ?name WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME Thing))"
+"SELECT ?loc WHERE { ?loc <http://dbpedia.org/property/commonName> "Egypt"@en } ","(Thing THAT ( http://dbpedia.org/property/commonName SOME "Egypt"@en ))"
+"SELECT ?Who WHERE { ?Who <http://www.w3.org/2000/01/rdf-schema#label> "Fred Durst"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Fred Durst"@en ))"
+"SELECT * WHERE { ?Person <http://dbpedia.org/property/resides> <http://dbpedia.org/resource/Greenwich%2C_Connecticut> ; <http://dbpedia.org/property/weight> ?weight } ","(Thing THAT ( http://dbpedia.org/property/resides SOME http://dbpedia.org/resource/Greenwich%2C_Connecticut )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing ))"
+"SELECT ?cat ?cat1 ?sub WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Buildings_and_structures_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Visitor_attractions_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Buildings_and_structures_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Visitor_attractions_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME Thing))"
+"SELECT ?film WHERE { ?film a <http://dbpedia.org/ontology/HistoricPlace> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/HistoricPlace ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Usolye-Sibirskoye> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Usolye-Sibirskoye))"
+"SELECT ?a ?c WHERE { ?a a <http://dbpedia.org/ontology/Band> . ?c a <http://dbpedia.org/ontology/Film> . <http://dbpedia.org/resource/Robin_Gibb> <http://dbpedia.org/ontology/associatedBand> ?a . ?c <http://dbpedia.org/ontology/musicComposer> ?a } ","ObjectProperty: http://dbpedia.org/ontology/associatedBandInverse 
+   inverseOf http://dbpedia.org/ontology/associatedBand
+ObjectProperty: http://dbpedia.org/ontology/musicComposerInverse 
+   inverseOf http://dbpedia.org/ontology/musicComposer
+(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Band )) AND (Thing THAT (http://dbpedia.org/ontology/associatedBandInverse SOME http://dbpedia.org/resource/Robin_Gibb)) AND (Thing THAT (http://dbpedia.org/ontology/musicComposerInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Scottish_Parliament_election%2C_2003> ?p ?value . ?value <http://dbpedia.org/property/percentage> ?y } ","((Thing SOME ((Thing THAT ( http://dbpedia.org/property/percentage SOME Thing )))))"
+"SELECT ?author WHERE { ?book <http://dbpedia.org/property/author> ?author } ","ObjectProperty: http://dbpedia.org/property/authorInverse 
+   inverseOf http://dbpedia.org/property/author
+(Thing THAT (http://dbpedia.org/property/authorInverse SOME Thing))"
+"SELECT ?people ?type WHERE { { ?people <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Bucharest> ; a ?type } } ","(Thing THAT ( http://dbpedia.org/ontology/birthPlace SOME http://dbpedia.org/resource/Bucharest )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?who ?birthday WHERE { ?who <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:German_composers> ; <http://dbpedia.org/property/birth> ?bidthday } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:German_composers )) AND (Thing THAT ( http://dbpedia.org/property/birth SOME Thing ))"
+"SELECT ?x ?z WHERE { ?x ?z <http://dbpedia.org/ontology/Place> } ","(Thing THAT (Thing SOME http://dbpedia.org/ontology/Place))"
+"SELECT ?country WHERE { ?country a <http://dbpedia.org/ontology/Town> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Town ))"
+"SELECT * WHERE { ?book <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Computer_science_books> ; <http://xmlns.com/foaf/0.1/name> ?title } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Computer_science_books )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?actor ?name WHERE { ?actor <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Spanish_actors> ; <http://www.w3.org/2000/01/rdf-schema#label> ?name } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Spanish_actors )) AND (Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing ))"
+"SELECT * WHERE { ?actor <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Spanish_actors> ; <http://xmlns.com/foaf/0.1/name> ?name } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Spanish_actors )) AND (Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Millerovo> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Millerovo))"
+"SELECT ?picture WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://xmlns.com/foaf/0.1/depiction> ?picture } ","ObjectProperty: http://xmlns.com/foaf/0.1/depictionInverse 
+   inverseOf http://xmlns.com/foaf/0.1/depiction
+(Thing THAT (http://xmlns.com/foaf/0.1/depictionInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?sub WHERE { <http://dbpedia.org/resource/Porsche> <http://www.w3.org/2004/02/skos/core#subject> ?sub } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Porsche))"
+"SELECT ?s WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> "Karabakh"@en } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Karabakh"@en ))"
+"SELECT * WHERE { ?artist a <http://dbpedia.org/ontology/MusicalArtist> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/MusicalArtist ))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Homogenization_%28chemistry%29> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/Homogenization_%28chemistry%29))"
+"SELECT ?Name WHERE { ?Person <http://dbpedia.org/property/deathPlace> <http://dbpedia.org/resource/Berlin> ; <http://dbpedia.org/property/name> ?Name } ","ObjectProperty: http://dbpedia.org/property/nameInverse 
+   inverseOf http://dbpedia.org/property/name
+(Thing THAT (http://dbpedia.org/property/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/deathPlace SOME http://dbpedia.org/resource/Berlin )))))"
+"SELECT * WHERE { ?film <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:American_films> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:American_films ))"
+"SELECT ?location WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en . ?location <http://dbpedia.org/property/namedFor> ?person } ","(Thing THAT (http://dbpedia.org/property/namedFor SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Molodyozhny%2C_Moscow_Oblast> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Molodyozhny%2C_Moscow_Oblast))"
+"SELECT ?category ?label WHERE { ?category <http://www.w3.org/2000/01/rdf-schema#label> ?label ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Main_topic_classifications> } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME Thing )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Main_topic_classifications ))"
+"SELECT ?places WHERE { ?places <http://dbpedia.org/ontology/location> <http://dbpedia.org/resource/Germany> . ?mon <http://dbpedia.org/ontology/location> ?places } ","ObjectProperty: http://dbpedia.org/ontology/locationInverse 
+   inverseOf http://dbpedia.org/ontology/location
+(Thing THAT ( http://dbpedia.org/ontology/location SOME http://dbpedia.org/resource/Germany )) AND (Thing THAT (http://dbpedia.org/ontology/locationInverse SOME Thing))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Portugal> ?type ?value . ?type a ?test } ","((Thing SOME Thing)) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME Thing ))"
+"SELECT ?cat ?sub ?abstract WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> ; <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Museums_in_Paris> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat ; <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Museums_in_Paris )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME ((Thing THAT ( http://dbpedia.org/ontology/abstract SOME Thing )))))"
+"SELECT ?name ?car WHERE { ?name <http://dbpedia.org/ontology/manufacturer> <http://dbpedia.org/resource/Peugeot> ; <http://dbpedia.org/property/class> ?car } ","(Thing THAT ( http://dbpedia.org/ontology/manufacturer SOME http://dbpedia.org/resource/Peugeot )) AND (Thing THAT ( http://dbpedia.org/property/class SOME Thing ))"
+"SELECT ?x ?name WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing ))"
+"SELECT ?name WHERE { <http://dbpedia.org/resource/The_Beatles> <http://dbpedia.org/ontology/associatedMusicalArtist> ?name } ","ObjectProperty: http://dbpedia.org/ontology/associatedMusicalArtistInverse 
+   inverseOf http://dbpedia.org/ontology/associatedMusicalArtist
+(Thing THAT (http://dbpedia.org/ontology/associatedMusicalArtistInverse SOME http://dbpedia.org/resource/The_Beatles))"
+"SELECT ?picture WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/occupation> ?job ; <http://dbpedia.org/property/birthPlace> ?birthLoc ; <http://xmlns.com/foaf/0.1/depiction> ?picture } ","ObjectProperty: http://xmlns.com/foaf/0.1/depictionInverse 
+   inverseOf http://xmlns.com/foaf/0.1/depiction
+(Thing THAT (http://xmlns.com/foaf/0.1/depictionInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT ( http://dbpedia.org/property/occupation SOME Thing )) AND (Thing THAT ( http://dbpedia.org/property/birthPlace SOME Thing )))))"
+"SELECT * WHERE { ?select a <http://dbpedia.org/ontology/Film> . ?id <http://dbpedia.org/property/title> ?ft ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film ))"
+"SELECT ?name ?actor WHERE { ?actor <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Belgian_actors> ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Belgian_actors )))))"
+"SELECT ?sl ?img WHERE { ?s <http://xmlns.com/foaf/0.1/depiction> ?img ; <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings> ; <http://www.w3.org/2000/01/rdf-schema#label> ?sl ; <http://dbpedia.org/property/museum> ?m } ","ObjectProperty: http://www.w3.org/2000/01/rdf-schema#labelInverse 
+   inverseOf http://www.w3.org/2000/01/rdf-schema#label
+(Thing THAT (http://www.w3.org/2000/01/rdf-schema#labelInverse SOME ((Thing THAT ( http://xmlns.com/foaf/0.1/depiction SOME Thing )) AND (Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Hieronymus_Bosch_paintings )) AND (Thing THAT ( http://dbpedia.org/property/museum SOME Thing )))))"
+"SELECT * WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name ; a <http://dbpedia.org/ontology/Artist> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain> ; <http://dbpedia.org/ontology/birthDate> ?nacimiento ; <http://dbpedia.org/ontology/deathDate> ?fallecimiento } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT ( http://dbpedia.org/ontology/nationality SOME http://dbpedia.org/resource/Spain )) AND (Thing THAT ( http://dbpedia.org/ontology/birthDate SOME Thing )) AND (Thing THAT ( http://dbpedia.org/ontology/deathDate SOME Thing ))"
+"SELECT ?uri ?abstract WHERE { ?uri <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Iron_Age_Europe> . ?uri1 <http://www.w3.org/2004/02/skos/core#broader> ?uri } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#broaderInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#broader
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Iron_Age_Europe )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#broaderInverse SOME Thing))"
+"SELECT ?homepage WHERE { ?person a <http://dbpedia.org/ontology/Place> ; <http://xmlns.com/foaf/0.1/homepage> ?homepage } ","ObjectProperty: http://xmlns.com/foaf/0.1/homepageInverse 
+   inverseOf http://xmlns.com/foaf/0.1/homepage
+(Thing THAT (http://xmlns.com/foaf/0.1/homepageInverse SOME ((Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Place )))))"
+"SELECT * WHERE { <http://dbpedia.org/resource/University_of_Washington_Michael_G._Foster_School_of_Business> <http://www.w3.org/2004/02/skos/core#subject> ?subj } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME http://dbpedia.org/resource/University_of_Washington_Michael_G._Foster_School_of_Business))"
+"SELECT ?person ?o WHERE { ?person ?o <http://dbpedia.org/resource/Amsterdam> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Amsterdam))"
+"SELECT ?lat ?long WHERE { ?country <http://www.w3.org/2000/01/rdf-schema#label> "United Kingdom"@en ; <http://dbpedia.org/property/capital> ?capital . ?capital <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat ; <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long } ","ObjectProperty: http://www.w3.org/2003/01/geo/wgs84_pos#latInverse 
+   inverseOf http://www.w3.org/2003/01/geo/wgs84_pos#lat
+(Thing THAT (http://www.w3.org/2003/01/geo/wgs84_pos#latInverse SOME ((Thing THAT ( http://www.w3.org/2003/01/geo/wgs84_pos#long SOME Thing )))))"
+"SELECT * WHERE { ?n a <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://xmlns.com/foaf/0.1/Person ))"
+"SELECT ?name ?birth ?actor WHERE { ?actor <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Belgian_actors> ; <http://xmlns.com/foaf/0.1/name> ?name } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Belgian_actors )))))"
+"SELECT * WHERE { ?person <http://xmlns.com/foaf/0.1/name> ?name ; a <http://xmlns.com/foaf/0.1/Person> } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://xmlns.com/foaf/0.1/Person ))"
+"SELECT ?loc WHERE { ?loc <http://dbpedia.org/property/commonName> ?o } ","(Thing THAT ( http://dbpedia.org/property/commonName SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Digora> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Digora))"
+"SELECT ?x ?Concept WHERE { ?x ?a ?Concept ; <http://www.georss.org/georss/point> ?z } ","(Thing THAT (Thing SOME Thing)) AND (Thing THAT ( http://www.georss.org/georss/point SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Naujoji_Akmen%C4%97> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Naujoji_Akmen%C4%97))"
+"SELECT ?job WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en ; <http://dbpedia.org/property/occupation> ?job } ","ObjectProperty: http://dbpedia.org/property/occupationInverse 
+   inverseOf http://dbpedia.org/property/occupation
+(Thing THAT (http://dbpedia.org/property/occupationInverse SOME ((Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )))))"
+"SELECT ?o WHERE { <http://dbpedia.org/resource/Chris_Cooper_%28actor%29> <http://dbpedia.org/property/birthdate> ?o } ","ObjectProperty: http://dbpedia.org/property/birthdateInverse 
+   inverseOf http://dbpedia.org/property/birthdate
+(Thing THAT (http://dbpedia.org/property/birthdateInverse SOME http://dbpedia.org/resource/Chris_Cooper_%28actor%29))"
+"SELECT * WHERE { ?a ?b <http://dbpedia.org/resource/Leading_actor> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Leading_actor))"
+"SELECT * WHERE { ?x <http://xmlns.com/foaf/0.1/name> ?name ; a <http://dbpedia.org/ontology/Artist> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain> ; <http://dbpedia.org/property/dateOfBirth> ?nacimiento } ","(Thing THAT ( http://xmlns.com/foaf/0.1/name SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Artist )) AND (Thing THAT ( http://dbpedia.org/ontology/nationality SOME http://dbpedia.org/resource/Spain )) AND (Thing THAT ( http://dbpedia.org/property/dateOfBirth SOME Thing ))"
+"SELECT ?name ?weight WHERE { ?Person <http://dbpedia.org/property/placeOfBirth> <http://dbpedia.org/resource/Seattle> ; <http://dbpedia.org/property/name> ?name ; <http://dbpedia.org/property/weight> ?weight } ","ObjectProperty: http://dbpedia.org/property/nameInverse 
+   inverseOf http://dbpedia.org/property/name
+(Thing THAT (http://dbpedia.org/property/nameInverse SOME ((Thing THAT ( http://dbpedia.org/property/placeOfBirth SOME http://dbpedia.org/resource/Seattle )) AND (Thing THAT ( http://dbpedia.org/property/weight SOME Thing )))))"
+"SELECT * WHERE { ?person <http://www.w3.org/2000/01/rdf-schema#label> "George Washington"@en . ?location <http://dbpedia.org/property/namedFor> ?person } ","ObjectProperty: http://dbpedia.org/property/namedForInverse 
+   inverseOf http://dbpedia.org/property/namedFor
+(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "George Washington"@en )) AND (Thing THAT (http://dbpedia.org/property/namedForInverse SOME Thing))"
+"SELECT * WHERE { ?id <http://dbpedia.org/ontology/starring> ?starring ; a <http://dbpedia.org/ontology/Film> ; <http://dbpedia.org/ontology/imdbId> ?imdb_id } ","(Thing THAT ( http://dbpedia.org/ontology/starring SOME Thing )) AND (Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Film )) AND (Thing THAT ( http://dbpedia.org/ontology/imdbId SOME Thing_id ))"
+"SELECT ?What WHERE { ?What <http://dbpedia.org/property/currentMembers> <http://dbpedia.org/resource/Fred_Durst> } ","(Thing THAT ( http://dbpedia.org/property/currentMembers SOME http://dbpedia.org/resource/Fred_Durst ))"
+"SELECT ?cat ?sub ?abstract WHERE { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Palaces_in_France> . ?sub <http://www.w3.org/2004/02/skos/core#subject> ?cat ; <http://dbpedia.org/ontology/abstract> ?abstract } ","ObjectProperty: http://www.w3.org/2004/02/skos/core#subjectInverse 
+   inverseOf http://www.w3.org/2004/02/skos/core#subject
+(Thing THAT ( http://www.w3.org/2004/02/skos/core#broader SOME http://dbpedia.org/resource/Category:Palaces_in_France )) AND (Thing THAT (http://www.w3.org/2004/02/skos/core#subjectInverse SOME ((Thing THAT ( http://dbpedia.org/ontology/abstract SOME Thing )))))"
+"SELECT * WHERE { ?s ?p "Golden Eye"@en } ","(Thing THAT ( Thing SOME "Golden Eye"@en ))"
+"SELECT * WHERE { ?loc <http://www.w3.org/2000/01/rdf-schema#label> "Lansing, New York"@en ; ?x ?y } ","(Thing THAT ( http://www.w3.org/2000/01/rdf-schema#label SOME "Lansing, New York"@en )) AND (Thing THAT (Thing SOME Thing))"
+"SELECT ?p ?o WHERE { ?dbactor <http://www.w3.org/2000/01/rdf-schema#label> "Kate Winslet"@en ; ?p ?o } ","((Thing SOME Thing))"
+"SELECT ?abstract WHERE { <http://dbpedia.org/resource/Green_Day> <http://dbpedia.org/ontology/hometown> ?abstract } ","ObjectProperty: http://dbpedia.org/ontology/hometownInverse 
+   inverseOf http://dbpedia.org/ontology/hometown
+(Thing THAT (http://dbpedia.org/ontology/hometownInverse SOME http://dbpedia.org/resource/Green_Day))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Michael_Jackson> <http://xmlns.com/foaf/0.1/name> ?name ; <http://xmlns.com/foaf/0.1/surname> ?surname ; <http://purl.org/dc/elements/1.1/description> ?des ; <http://www.w3.org/2004/02/skos/core#subject> ?sub } ","ObjectProperty: http://xmlns.com/foaf/0.1/nameInverse 
+   inverseOf http://xmlns.com/foaf/0.1/name
+(Thing THAT (http://xmlns.com/foaf/0.1/nameInverse SOME ((http://dbpedia.org/resource/Michael_Jackson THAT ( http://xmlns.com/foaf/0.1/surname SOME Thing )) AND (http://dbpedia.org/resource/Michael_Jackson THAT ( http://purl.org/dc/elements/1.1/description SOME Thing )) AND (http://dbpedia.org/resource/Michael_Jackson THAT ( http://www.w3.org/2004/02/skos/core#subject SOME Thing )))))"
+"SELECT ?person ?o WHERE { ?person ?placeOfBirth <http://dbpedia.org/resource/Amsterdam> } ","(Thing THAT (Thing SOME http://dbpedia.org/resource/Amsterdam))"
+"SELECT * WHERE { <http://dbpedia.org/resource/Partner> <http://dbpedia.org/property/disambiguates> ?result } ","ObjectProperty: http://dbpedia.org/property/disambiguatesInverse 
+   inverseOf http://dbpedia.org/property/disambiguates
+(Thing THAT (http://dbpedia.org/property/disambiguatesInverse SOME http://dbpedia.org/resource/Partner))"
+"SELECT ?country ?currency WHERE { ?country a <http://dbpedia.org/ontology/Country> ; <http://dbpedia.org/property/currency> ?currency } ","(Thing THAT ( http://www.w3.org/1999/02/22-rdf-syntax-ns#type SOME http://dbpedia.org/ontology/Country )) AND (Thing THAT ( http://dbpedia.org/property/currency SOME Thing ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Sudzha> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Sudzha))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Lyubertsy> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Lyubertsy))"
+"SELECT * WHERE { ?temas <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Statistical_algorithms> } ","(Thing THAT ( http://www.w3.org/2004/02/skos/core#subject SOME http://dbpedia.org/resource/Category:Statistical_algorithms ))"
+"SELECT ?s WHERE { <http://dbpedia.org/resource/Bugulma> a ?s } ","ObjectProperty: http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse 
+   inverseOf http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+(Thing THAT (http://www.w3.org/1999/02/22-rdf-syntax-ns#typeInverse SOME http://dbpedia.org/resource/Bugulma))"
+"SELECT ?property ?hasValue WHERE { <http://dbpedia.org/resource/Michael_Jackson> ?property ?hasValue } ","((Thing SOME Thing))"

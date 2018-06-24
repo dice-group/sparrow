@@ -51,7 +51,7 @@ public class Sparql2Owl {
 				break;
 			}
 		}
-		System.out.println("Found root node: "+rootNode);
+//		System.out.println("Found root node: "+rootNode);
 
 		// 3. use rules of nodes and graph structure
 		RuleIndicator ruleIndicator = new RuleIndicator(ruleFile, dismissURIQuotes);

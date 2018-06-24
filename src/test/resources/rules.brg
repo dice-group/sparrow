@@ -5,6 +5,9 @@
 0 -> %%_0 URI_0 LITERAL -> %%_0 THAT ( URI_0 SOME LITERAL )
 1 -> %%_0 URI_0 LITERAL -> 
 2 -> %%_0 URI_0 LITERAL -> 
+0 -> %%_0 %%_1 LITERAL -> %%_0 THAT ( %%_1 SOME LITERAL )
+1 -> %%_0 %%_1 LITERAL -> (%%_1 SOME LITERAL) AND (%%_1^{-1} %%_0)
+2 -> %%_0 %%_1 LITERAL -> LITERAL THAT ( %%_1^{-1} SOME %%_0)
 0 -> URI_0 %%_0 URI_1 -> URI_0 THAT ( %%_0 SOME URI_1 )
 1 -> URI_0 %%_0 URI_1 -> %%_0 SOME URI_1 AND %%_0^{-1} SOME URI_0
 2 -> URI_0 %%_0 URI_1 -> 
@@ -15,8 +18,21 @@
 1 -> URI_0 URI_1 %%_0 -> 
 2 -> URI_0 URI_1 %%_0 -> %%_0 THAT (URI_1^{-1} SOME URI_0)
 0 -> %%_0 URI_0 %%_1 ->  %%_0 THAT ( URI_0 SOME %%_1 )
-1 -> %%_0 URI_0 %%_1 -> 
-2 -> %%_0 URI_0 %%_1 -> 
+1 -> %%_0 URI_0 %%_1 -> (URI_0 SOME %%_1) AND (URI_0^{-1} SOME %%_0)
+2 -> %%_0 URI_0 %%_1 -> %%_1 THAT (URI_0^{-1} SOME %%_0)
 0 -> URI_0 URI_1 LITERAL -> URI_0 THAT ( URI_1 SOME LITERAL )
 1 -> URI_0 URI_1 LITERAL -> 
 2 -> URI_0 URI_1 LITERAL -> 
+
+
+0 -> URI %%_0 %%_1 -> URI THAT (%%_0 SOME %%_1)
+1 -> URI %%_0 %%_1 -> ( %%_0 SOME %%_1 ) AND  ( %%_0^(-1) SOME URI)
+2 -> URI %%_0 %%_1 -> %%_1  THAT (%%_0^{-1} SOME URI)
+
+0 -> %%_0 %%_1 URI -> %%_0 THAT (%%_1 SOME URI)
+1 -> %%_0 %%_1 URI -> ( %%_1 SOME URI ) AND  ( %%_1^(-1) SOME %%_0)
+2 -> %%_0 %%_1 URI -> URI THAT (%%_1^{-1} SOME %%_0)
+
+0 -> %%_0 %%_1 %%_2 -> %%_0 THAT (%%_1 SOME %%_2)
+1 -> %%_0 %%_1 %%_2 -> ( %%_1 SOME %%_2 ) AND  ( %%_1^(-1) SOME %%_0)
+2 -> %%_0 %%_1 %%_2 -> %%_2  THAT (%%_1^{-1} SOME %%_0)

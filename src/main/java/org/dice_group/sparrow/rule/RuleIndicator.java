@@ -43,7 +43,7 @@ public class RuleIndicator {
 						rules.loadRule(ruleString, dismissURIQuotes);
 					}
 					catch(Exception e) {
-						System.out.println("Rule could not be loaded "+ruleString);
+//						System.out.println("Rule could not be loaded "+ruleString);
 					}
 			}
 		}
@@ -64,7 +64,7 @@ public class RuleIndicator {
 
 				}
 			}
-			System.out.println(query.toString());
+//			System.out.println(query.toString());
 			StringBuilder completeQuery = new StringBuilder();
 			String queryStr = query.build();
 			//TODO for each property(-1) -> create inverse rules and replace with propertyInverse
@@ -105,7 +105,7 @@ public class RuleIndicator {
 			return null;
 		}
 		OWLNode initial = rules.execute(relation, direction);
-		System.out.println(initial);
+//		System.out.println(initial);
 		GroupOWLNode group = new GroupOWLNode();
 		group.setParent(initial);
 		if (alreadyUsed.contains(relation) && !(lastNode instanceof VarGraphNode) ) {
