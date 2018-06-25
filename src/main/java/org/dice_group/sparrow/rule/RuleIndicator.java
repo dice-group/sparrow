@@ -70,7 +70,7 @@ public class RuleIndicator {
 			for(String var : propertyVars) {
 				//String baseRule = "ObjectProperty: baseRule ";
 				//completeQuery.append(baseRule);
-				queryStr = queryStr.replace(var, "baseRule");
+				queryStr = queryStr.replace(var, "topProperty");
 			}
 			//for each property(-1) -> create inverse rules and replace with propertyInverse
 			String inverseRule = "ObjectProperty: INVERSE \n   inverseOf PROP";
