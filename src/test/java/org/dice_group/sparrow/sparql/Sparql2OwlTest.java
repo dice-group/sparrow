@@ -29,6 +29,9 @@ public class Sparql2OwlTest {
 				"(Thing THAT ( http://test.com#p1 SOME http://test.com/res/Berlin ))" });
 		data.add(new Object[] { "SELECT ?s ?o ?t WHERE { ?s <http://test.com#p1> ?o . ?s <http://test.com#p2> <http://test.com/res/obj1> . ?o <http://test.com#p1> <http://test.com/res/obj3> . ?o <http://test.com#p3> ?t . ?t <http://test.com#p2> <http://test.com/res/obj1> }", 
 				"(Thing THAT (http://test.com#p1 SOME ((Thing THAT ( http://test.com#p1 SOME http://test.com/res/obj3 )) AND (Thing THAT (http://test.com#p3 SOME ((Thing THAT ( http://test.com#p2 SOME http://test.com/res/obj1 )))))))) AND (Thing THAT ( http://test.com#p2 SOME http://test.com/res/obj1 ))" });
+		data.add(new Object[] { "SELECT ?s WHERE { ?s <http://test.com#p1> ?o . ?o <http://test.com#name> \"Fritz\". ?s ?x ?y . ?y <http://rdf.type> <http://Obj.com>}", 
+		"(Thing THAT (http://test.com#p1 SOME ((Thing THAT ( http://test.com#name SOME \"Fritz\" ))))) AND (Thing THAT (baseRule SOME ((Thing THAT ( http://rdf.type SOME http://Obj.com )))))" });
+
 		return data;
 	}
 

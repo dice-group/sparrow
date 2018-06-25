@@ -67,21 +67,23 @@ public class RuleIndicator {
 //			System.out.println(query.toString());
 			StringBuilder completeQuery = new StringBuilder();
 			String queryStr = query.build();
-			//TODO for each property(-1) -> create inverse rules and replace with propertyInverse
+			for(String var : propertyVars) {
+				//String baseRule = "ObjectProperty: baseRule ";
+				//completeQuery.append(baseRule);
+				queryStr = queryStr.replace(var, "baseRule");
+			}
+			//for each property(-1) -> create inverse rules and replace with propertyInverse
 			String inverseRule = "ObjectProperty: INVERSE \n   inverseOf PROP";
 			Pattern p = Pattern.compile("[\\s\\)\\(]([^\\s\\(\\)]+)\\^\\{-1\\}");
 			Matcher m = p.matcher(queryStr);
+			
 			while(m.find()) {
 				String prop = m.group(1);
 				completeQuery.append(inverseRule.replace("PROP", prop).replace("INVERSE", prop+"Inverse")).append("\n");
 				queryStr = queryStr.replace(prop+"^{-1}", prop+"Inverse");
 			}
 			//TODO for each property variable (save while going through) replace with baseRule and define it
-			for(String var : propertyVars) {
-				//String baseRule = "ObjectProperty: baseRule ";
-				//completeQuery.append(baseRule);
-				queryStr = queryStr.replace(var, "baseRule");
-			}
+			
 			if(!propertyVars.isEmpty()) {
 				
 			}
@@ -113,7 +115,7 @@ public class RuleIndicator {
 		}
 		alreadyUsed.add(relation);
 		if(relation.get(1)instanceof VarGraphNode) {
-			propertyVars.add(relation.get(1).toString());
+			propertyVars.add(relation.getPredicate().getName());
 		}
 		for (int i = 0; i < 3; i++) {
 			if(i==1 && !(relation.get(i) instanceof VarGraphNode)) {

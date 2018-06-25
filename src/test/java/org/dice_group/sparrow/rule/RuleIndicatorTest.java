@@ -62,7 +62,9 @@ public class RuleIndicatorTest {
 		v2.addRelation(rel1);
 		n3.addRelation(rel1);
 		this.indicator=new RuleIndicator("src/test/resources/rules.brg", true);
-		assertEquals("((Thing SOME n3) AND (Thing^{-1} SOME n2))",indicator.injectRules(v2).toString());
+		assertEquals("ObjectProperty: baseRuleInverse \n" + 
+				"   inverseOf baseRule\n" + 
+				"((baseRule SOME n3) AND (baseRuleInverse SOME n2))",indicator.injectRules(v2).toString());
 		
 	}
 	
@@ -117,7 +119,9 @@ public class RuleIndicatorTest {
 		
 		String query =  indicator.injectRules(v2);
 		System.out.println(query.toString());
-		assertEquals("(Thing THAT (rule1 SOME ((n3 THAT ( rule2 SOME l1 ))))) AND (Thing THAT (rule1 SOME ((Thing THAT ( rule1 SOME n3 ))))) AND (Thing THAT (rule1^{-1} SOME ((n1 THAT (rule1 SOME ((n2 THAT ( rule2 SOME n3 ))))))))",query.toString());
+		assertEquals("ObjectProperty: rule1Inverse \n" + 
+				"   inverseOf rule1\n" + 
+				"(Thing THAT (rule1 SOME ((n3 THAT ( rule2 SOME l1 ))))) AND (Thing THAT (rule1 SOME ((Thing THAT ( rule1 SOME n3 ))))) AND (Thing THAT (rule1Inverse SOME ((n1 THAT (rule1 SOME ((n2 THAT ( rule2 SOME n3 ))))))))",query.toString());
 
 	}	
 }
