@@ -1,0 +1,6 @@
+"SELECT * {?s ?p ?o1}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Student> and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#advisor> some (<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Faculty> and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#teacherOf> some <http://swat.cse.lehigh.edu/onto/univ-bench.owl#Course>) and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#takesCourse> some <http://swat.cse.lehigh.edu/onto/univ-bench.owl#Course>"
+"SELECT * {?s ?p ?o2}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Student> and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#advisor> some (<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Faculty> and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#teacherOf> some <http://swat.cse.lehigh.edu/onto/univ-bench.owl#Course>)"
+"SELECT * {?s ?p ?o3}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Student>"
+"SELECT * {?s ?p ?o4}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Faculty>"
+"SELECT * {?s ?p ?o5}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Article>"
+"SELECT * {?s ?p ?o6}","<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Article> and <http://swat.cse.lehigh.edu/onto/univ-bench.owl#Publication>"

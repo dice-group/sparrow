@@ -35,18 +35,20 @@ public class Main {
 		if (options.contains("-nD")) {
 			dismissURIQuotes = false;
 		}
+		int id=0;
 		try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 				PrintWriter pw = new PrintWriter(outputFile)) {
 			String query;
 			Sparql2Owl bridge = new Sparql2Owl(ruleFile, dismissURIQuotes);
-			pw.println("sparql,owl");
+			pw.println("id,sparql,owl");
 			while ((query = reader.readLine()) != null) {
 				String owl = bridge.convertSparqlQuery(query);
 				if (!owl.isEmpty()) {
-					print(query, owl, pw);
+					print(id++, query, owl, pw);
 					succeded++;
 				}
 				else {
+					id++;
 					failed++;
 				}
 			}
@@ -59,10 +61,10 @@ public class Main {
 
 	}
 	
-	public static void print(String sparql, String owl, PrintWriter pw) {
+	public static void print(int id, String sparql, String owl, PrintWriter pw) {
 		Query q = QueryFactory.create(sparql);
 		q.getPrefixMapping().clearNsPrefixMap();
-		pw.print("\"" + q.serialize().replace("\n", " ").replaceAll("\\s+", " ") + "\",");
+		pw.print(id+",\"" + q.serialize().replace("\n", " ").replaceAll("\\s+", " ") + "\",");
 		pw.println("\"" + owl + "\"");
 	}
 
