@@ -94,4 +94,6 @@ public class Rules {
 		}
 		throw new RuleNotAvailableException(relation.toString()+" with direction "+direction);
 	}
+	
+	
 }

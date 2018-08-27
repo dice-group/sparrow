@@ -1,9 +1,5 @@
 package org.dice_group.sparrow.rule;
 
-import org.dice_group.sparrow.graph.GraphNode;
-import org.dice_group.sparrow.graph.Triple;
-import org.dice_group.sparrow.graph.impl.URIGraphNode;
-import org.dice_group.sparrow.graph.impl.VarGraphNode;
 import org.dice_group.sparrow.owl.BaseOWLNode;
 import org.dice_group.sparrow.owl.OWLNode;
 import org.dice_group.sparrow.owl.OWLParser;
@@ -59,11 +55,12 @@ public class Rule {
 			else if(ruleObj instanceof GraphNode) {
 				exchange = ((GraphNode)ruleObj).getName();
 			}
-			if(dismissURIQuotes) {
+//			if(dismissURIQuotes) {
 				if(relation.get(i) instanceof URIGraphNode) {
-					replacer = replacer.replace("<", "").replace(">","");
+					if(!((URIGraphNode)relation.get(i)).getName().startsWith("<"))
+					replacer = "<"+replacer+">";
 				}
-			}
+//			}
 			owlString = owlString.replace(exchange, replacer);
 			
 		}

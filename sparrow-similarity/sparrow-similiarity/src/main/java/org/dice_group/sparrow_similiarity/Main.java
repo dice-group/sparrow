@@ -39,7 +39,7 @@ public class Main
 
     	SimilarityGraph graph = new SimilarityGraph(reader.getOWLOntology(), parser.parse());
     	graph.executeSimilarity(buckets);
-//    	SimilarityPrinter.print(graph);
+    	SimilarityPrinter.print(graph, reader);
     	//StatisticsPrinter.print(graph, buckets);
     	
     	QueryProber prober = new QueryProber(reader);

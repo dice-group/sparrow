@@ -6,13 +6,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Calendar;
 import org.dice_group.sparrow_similiarity.graph.SimilarityGraph;
+import org.dice_group.sparrow_similiarity.io.SparrowQueryTableReader;
 
 public class SimilarityPrinter {
 
 	public static final String FILENAME="sim"+Calendar.getInstance().getTimeInMillis()+".tsv";
 	
-	public static void print(SimilarityGraph graph) throws IOException {
-		PrintTable table = new PrintTable();
+	public static void print(SimilarityGraph graph, SparrowQueryTableReader reader) throws IOException {
+		PrintTable table = new PrintTable(reader);
 		table.create(graph);
 		File f = new File(FILENAME);
 		f.createNewFile();
