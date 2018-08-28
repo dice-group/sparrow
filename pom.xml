@@ -28,5 +28,10 @@
   		<artifactId>elk-owlapi</artifactId>
   		<version>0.4.3</version>
   	</dependency>
+  	<dependency>
+  		<groupId>net.sourceforge.owlapi</groupId>
+  		<artifactId>owlapi-api</artifactId>
+  		<version>5.1.1</version>
+  	</dependency>
   </dependencies>
 </project>

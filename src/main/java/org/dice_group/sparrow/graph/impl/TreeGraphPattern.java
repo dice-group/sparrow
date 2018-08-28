@@ -1,7 +1,9 @@
-package org.dice_group.sparrow.graph;
+package org.dice_group.sparrow.graph.impl;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import org.apache.jena.sparql.expr.Expr;
 
 public class TreeGraphPattern extends GraphPattern {
 
@@ -56,5 +58,50 @@ public class TreeGraphPattern extends GraphPattern {
 		return parents.isEmpty();
 	}
 	
+	
+	public String toString(boolean b) {
+		StringBuilder ret= new StringBuilder();
+		if(!b) {
+			if(this.getSubject().isURI()) {
+				ret.append("<").append(this.getSubject()).append("> ");
+			}else {
+				ret.append(this.getSubject());				
+			}
+		}
+		if(this.getPredicate().isURI()) {
+			ret.append("\t-- <"+this.getPredicate()+"> --> ");
+		}
+		else {
+			ret.append("\t-- "+this.getPredicate()+" --> ");
+		}
+		if(this.getObject().isURI()) {
+			ret.append("<"+this.getObject()+">");
+		}
+		else {
+			ret.append(this.getObject());
+
+		}
+		if(!filter.isEmpty()) {
+			ret.append("[");
+			for(Expr expr : filter) {
+				ret.append(expr).append(", ");
+			}
+			ret.append("]");
+		}
+		for(int i=0;i<children.size();i++ ) {
+			TreeGraphPattern tgp = children.get(i);
+			if(i!=0) {
+				ret.append("\t\t\t\t");
+			}
+			ret.append(tgp.toString(true)).append("\n");
+		}
+		
+		return ret.toString();
+	}
+	
+	@Override
+	public String toString() {
+		return toString(false);
+	}
 	
 }

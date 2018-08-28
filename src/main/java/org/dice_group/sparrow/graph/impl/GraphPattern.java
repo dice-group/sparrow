@@ -1,4 +1,4 @@
-package org.dice_group.sparrow.graph;
+package org.dice_group.sparrow.graph.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.dice_group.sparrow.rule.Rule;
 
 public class GraphPattern {
 
-	private Node subject;
+	protected Node subject;
 	/**
 	 * @return the subject
 	 */
@@ -54,22 +54,22 @@ public class GraphPattern {
 		this.object = object;
 	}
 
-	private Node predicate;
-	private Node object;
+	protected Node predicate;
+	protected Node object;
 
-	private List<Expr> filter = new LinkedList<Expr>();
+	protected List<Expr> filter = new LinkedList<Expr>();
 
 	public boolean addIfFit(Expr expr) {
 		for (Var v : expr.getVarsMentioned()) {
-			if (subject.isVariable() && v.getVarName().equals(subject.toString())) {
+			if (subject.isVariable() && v.toString().equals(subject.toString())) {
 				filter.add(expr);
 				return true;
 			}
-			if (predicate.isVariable() && v.getVarName().equals(subject.toString())) {
+			if (predicate.isVariable() && v.toString().equals(predicate.toString())) {
 				filter.add(expr);
 				return true;
 			}
-			if (object.isVariable() && v.getVarName().equals(subject.toString())) {
+			if (object.isVariable() && v.toString().equals(object.toString())) {
 				filter.add(expr);
 				return true;
 			}

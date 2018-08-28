@@ -13,9 +13,9 @@ import org.apache.jena.sparql.syntax.ElementUnion;
 import org.apache.jena.sparql.syntax.ElementVisitor;
 import org.apache.jena.sparql.syntax.ElementVisitorBase;
 import org.apache.jena.sparql.syntax.RecursiveElementVisitor;
-import org.dice_group.sparrow.graph.Graph;
-import org.dice_group.sparrow.graph.GraphPattern;
-import org.dice_group.sparrow.graph.TreeGraphPattern;
+import org.dice_group.sparrow.graph.impl.GraphImpl;
+import org.dice_group.sparrow.graph.impl.GraphPattern;
+import org.dice_group.sparrow.graph.impl.TreeGraphPattern;
 
 public class ListElementVisitor extends RecursiveElementVisitor {
 
@@ -30,10 +30,10 @@ public class ListElementVisitor extends RecursiveElementVisitor {
 	private boolean started = false;
 	private Element where;
 
-	public List<Graph<Node, TreeGraphPattern>> graphs = new LinkedList<Graph<Node, TreeGraphPattern>>();
+	public List<GraphImpl<Node, TreeGraphPattern>> graphs = new LinkedList<GraphImpl<Node, TreeGraphPattern>>();
 	
 	public void startElement(ElementUnion el) {
-		graphs.add(new Graph<Node, TreeGraphPattern>());
+		graphs.add(new GraphImpl<Node, TreeGraphPattern>());
 		//start new GraphPattern List
 	}
 
@@ -50,9 +50,10 @@ public class ListElementVisitor extends RecursiveElementVisitor {
 	}
 
 	public void endElement(ElementFilter el) {
-		
+		if(started) {
 		for(GraphPattern pattern : graphs.get(graphs.size()-1).getEdges()) {
 			pattern.addIfFit(el.getExpr());
+		}
 		}
 	}
 
@@ -60,7 +61,7 @@ public class ListElementVisitor extends RecursiveElementVisitor {
 		if (!started && el.equals(where)) {
 			// root element found
 			started = true;
-			graphs.add(new Graph<Node, TreeGraphPattern>());
+			graphs.add(new GraphImpl<Node, TreeGraphPattern>());
 
 		} else if (started) {
 

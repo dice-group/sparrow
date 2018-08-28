@@ -31,8 +31,7 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException, IOException, RootNodeNotVarException,
 			RuleHasNotNObjectsException, RuleNotAvailableException, GraphContainsCycleException, TooManyProjectVarsException {
 		if (args.length < 3) {
-			System.out.println("USAGE: sparrow [-nD] ruleFile queryInputFile queryOutputFile");
-			System.out.println("\t -nD := Dismiss URI Quotes in OWL. <http:test.com> -> http://test.com");
+			System.out.println("USAGE: sparrow ruleFile queryInputFile queryOutputFile");
 			return;
 		}
 		String ruleFile = args[args.length - 3];
@@ -42,32 +41,28 @@ public class Main {
 		}
 		String outputFile = args[args.length - 1];
 		int succeded=0, failed=0;
-		boolean dismissURIQuotes = true;
-		List<String> options = Arrays.asList(ArrayUtils.subarray(args, 0, args.length - 3));
-		if (options.contains("-nD")) {
-			dismissURIQuotes = false;
-		}
 		int id=0;
 		try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 				PrintWriter pw = new PrintWriter(outputFile); PrintWriter owlOut = new PrintWriter(outputFile.replace(".", "")+"_rules.owl")) {
 			String query;
-			Sparql2Owl bridge = new Sparql2Owl(ruleFile, dismissURIQuotes);
+			Sparql2Owl bridge = new Sparql2Owl(ruleFile);
 			pw.println("id,sparql,owl");
-			Set<String> rules = new HashSet<String>();
 			while ((query = reader.readLine()) != null) {
+				try {
 				Query q = QueryFactory.create(query);
+				
 				String owl = bridge.convert(q, q.getResultVars().get(0));
 				if (!owl.isEmpty()) {
-					String[] owls = owl.split("\n");
-					for(int j=0;j<owls.length-1;j++) {
-						rules.add(owls[j]);
-					}
-					print(id++, query, owls[owls.length-1], pw);
+					print(id++, query, owl.replace("\n", " "), pw);
 					succeded++;
 				}
 				else {
 					id++;
 					failed++;
+				}
+				}catch(Exception e) {
+					System.err.println("eRROR with "+query);
+					id++;failed++;
 				}
 			}
 			StringBuilder owlStr = new StringBuilder();
@@ -80,12 +75,13 @@ public class Main {
 					"@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n" + 
 					"\n" + 
 					"<http://sparrow.dice/rules/inverse> a owl:Ontology ;\n" + 
-					"     dc:title \"Inverse Rules created by Sparrow \" .\n\n");
-			for(String rule : rules) {
+					"     dc:title \"Inverse Rules created by Sparrow \" .\n\n"
+					+"");
+			//TODO define topProp
+			for(String rule : bridge.getRules()) {
 				owlStr.append(rule).append("\n");
 			}
 			Model m = ModelFactory.createDefaultModel();
-//			Model ont = ModelFactory.createOntologyModel();
 			System.out.println(owlStr);
 			m.read(new StringReader(owlStr.toString()), "http://sparrow.dice/rules/inverse", "TTL");
 			m.write(owlOut, "RDF/XML");
