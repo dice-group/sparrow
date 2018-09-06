@@ -1,0 +1,7 @@
+VAR rdf:type URI ->  URI
+VAR <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> URI ->  URI
+VAR URI URI -> URI ( URI )
+
+VAR VAR URI -> topProperty ( VAR )
+VAR URI VAR -> URI ( VAR )
+VAR VAR VAR -> topProperty ( VAR )

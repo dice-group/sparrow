@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -32,6 +33,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.normalform.NegationalNormalFormConverter;
 import org.semanticweb.owlapi.util.OWLOntologyMerger;
 import org.tu_dresden.elastiq.owl.io.SimpleOWLEntityChecker;
 
@@ -52,7 +54,8 @@ public class SparrowQueryTableReader {
 	private OWLOntologyManager manager;
 	private OWLOntology ontology;
 	private String service = "http://dbpedia.org/sparql";
-
+	private NegationalNormalFormConverter normalFormConverter;
+	
 	/**
 	 * @return the listIndex2ID
 	 */
@@ -128,6 +131,8 @@ public class SparrowQueryTableReader {
 		OWLOntologyManager tmp = OWLManager.createOWLOntologyManager();
 		ontology = new OWLOntologyMerger(manager).createMergedOntology(tmp, IRI.create("http://sparrow.dice.owl"));
 		manager = tmp;
+		normalFormConverter = new NegationalNormalFormConverter(manager.getOWLDataFactory());
+		
 //		OWLOntologyManager tmp2 = OWLManager.createOWLOntologyManager();
 //		tmp2.getOntologies().add(ontology);
 //		System.out.println(tmp.getOWLDataFactory().getOWLClass(IRI.create("<http://dbpedia.org/ontology/Film>")));
@@ -158,31 +163,38 @@ public class SparrowQueryTableReader {
 				int start = 0;
 				if (tokens.length > 2) {
 					start++;
-					i = Integer.parseInt(tokens[0]);
+//					i = Integer.parseInt(tokens[0]);
 				}
 				// remove
 				if (tokens[start].startsWith("\"") && tokens[start].endsWith("\"")) {
 					tokens[start] = tokens[start].substring(1, tokens[start].length() - 1);
 				}
 				try {
-					sparql.add(QueryFactory.create(tokens[start]));
-				} catch (Exception e) {
-					continue;
-				}
-				start++;
-				if (tokens[start].startsWith("\"") && tokens[start].endsWith("\"")) {
-					tokens[start] = tokens[start].substring(1, tokens[start].length() - 1);
-				}
-				try {
+					Query q = QueryFactory.create(tokens[start]);
+
+					start++;
+					if (tokens[start].startsWith("\"") && tokens[start].endsWith("\"")) {
+						tokens[start] = tokens[start].substring(1, tokens[start].length() - 1);
+					}
+				
 					OWLClassExpression cl = parseSingle(tokens[start]);
-					owl.add(cl.getNNF());
+					owl.add(normalFormConverter.convertToNormalForm(cl));
+					sparql.add(q);
 					listIndex2ID.put(sparql.size() - 1, i++);
-				} catch (ParserException e) {
+				} catch (Exception e) {
 					System.out.println("Could not make query " + i + " " + e);
 					
 				}
 			}
 		} catch (IOException | QueryException e) {
+			e.printStackTrace();
+		}
+		try(PrintWriter cleanpw = new PrintWriter(file.getName()+"_clean.csv")){
+			for(int j=0;j<sparql.size();j++) {
+				cleanpw.println(j+",\""+sparql.get(j).toString().replace("\n"," ")+"\",\""+owl.get(j).toString().replace("\n"," ")+"\"");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(owl.size());

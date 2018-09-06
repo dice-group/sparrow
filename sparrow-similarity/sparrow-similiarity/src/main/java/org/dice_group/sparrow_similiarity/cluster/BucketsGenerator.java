@@ -13,7 +13,7 @@ import org.semanticweb.owlapi.model.OWLClassExpression;
  */
 public class BucketsGenerator {
 
-	private static final int THRESHOLD = 200;
+	private static final int THRESHOLD = 10000;
 
 	public static List<Bucket> create(List<OWLClassExpression> expressions){
 		List<Bucket> buckets = new LinkedList<Bucket>();

@@ -65,7 +65,7 @@ public class Rule {
 		// exchange subject, predicate, child
 		OWLClassExpression clE = PrimitiveOWLParser.parse(this.output);
 		if (clE instanceof OWLRuleExpression) {
-			// TODO test if predicate is variable
+			//test if predicate is variable
 			String rule = "";
 			if (tgp.getPredicate().isVariable()) {
 				rule = "owl:topObjectProperty";
